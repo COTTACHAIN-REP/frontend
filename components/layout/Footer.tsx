@@ -4,7 +4,7 @@ import { FaTwitter, FaTelegramPlane, FaDiscord } from 'react-icons/fa';
 
 export default function Footer() {
   return (
-    <footer className="bg-gradient-to-t from-[#035591] to-[#035591] text-white pt-12 pb-6 relative overflow-hidden">
+    <footer className="text-white h-auto pt-12 p-4 w-[90%] relative overflow-hidden">
       {/* Background animation (optional, subtle) */}
       <div className="absolute inset-0 pointer-events-none opacity-30">
         {/* Example: animated gradient or SVG nodes could go here */}
@@ -13,24 +13,26 @@ export default function Footer() {
         {/* Left: Logo & Description */}
         <div className="flex-1 min-w-[220px] flex flex-col gap-4">
           <div className="flex items-center gap-3">
-            <Image className='rounded-lg' src='/assests/images/logo.jpeg' height={60} width={60} alt='Cottachain Logo' />
-            <span className="text-2xl font-bold tracking-wide">COTTACHAIN</span>
+            <Image className='rounded-lg' src='/assests/images/Logo.svg' height={140} width={170} alt='Cottachain Logo' />
+          
           </div>
           <p className="text-white/80 text-sm max-w-xs">
             COTTACHAIN is the decentralized reputation infrastructure for the future of the internet. Trustless. Tamper-proof. Yours to own.
           </p>
+
+          <button className='rounded-[10px] w-[200px] text-white border-none p-3 bg-gray-700'>Enter Cottachain</button>
         </div>
         {/* Right: Navigation Columns */}
         <div className="flex-1 grid grid-cols-2 md:grid-cols-3 gap-8">
           {/* Explore */}
           <div>
-            <h4 className="font-semibold mb-2">Explore</h4>
+            <h4 className="font-semibold mb-2 gap-y-7">Explore</h4>
             <ul className="space-y-1 text-white/80 text-sm">
-              <li><a href="#about" className="hover:text-blue-300">About</a></li>
-              <li><a href="#technology" className="hover:text-blue-300">Technology</a></li>
-              <li><a href="#token" className="hover:text-blue-300">Token</a></li>
-              <li><a href="#roadmap" className="hover:text-blue-300">Roadmap</a></li>
-              <li><a href="#community" className="hover:text-blue-300">Community</a></li>
+              <li><a href="#about" className="hover:text-blue-300">Docs</a></li>
+              <li><a href="#technology" className="hover:text-blue-300">Integration Partner</a></li>
+              <li><a href="#token" className="hover:text-blue-300">Web2 service provider</a></li>
+              <li><a href="#roadmap" className="hover:text-blue-300">Web3 service provider</a></li>
+              {/* <li><a href="#community" className="hover:text-blue-300">Community</a></li> */}
             </ul>
           </div>
           {/* Community */}

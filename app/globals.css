@@ -6,10 +6,11 @@
   --color-hover: #023B66;
   --color-accent: #FFB300;
   --color-background: #E6F1F8;
+  --font-inter: 'Inter', sans-serif;
 }
 
 body {
-  font-family: var(--font-poppins), sans-serif;
+  font-family: var(--font-inter), sans-serif;
   max-width: 1440px;
 }
 

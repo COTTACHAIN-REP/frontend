@@ -30,11 +30,11 @@ const Navbar = () => {
 
   return (
     <div>
-      <div className="bg-white/10 mb-[30%] text-[0.8rem] z-20 border-none shadow-lg min-w-[70%] p-2 max-w-[80%] left-1/2 transform -translate-x-1/2 flex items-center justify-between fixed top-[4%] backdrop-blur-md border border-white/30 rounded-[35px] shadow-lg px-6">
+      <div className="bg-white/10 mb-[30%] text-[0.8rem] z-20 border-none shadow-lg min-w-[70%] p-2 max-w-[80%] left-1/2 transform -translate-x-1/2 flex items-center justify-between fixed top-[4%] backdrop-blur-md border border-white/30 h-[64px] rounded-[20px] shadow-lg px-6">
         <div>
-          <Image className='rounded-lg transition-transform duration-200 hover:scale-110' src='/assests/images/logo.jpeg' height={40} width={40} alt='Cottachain Logo' />
+          <Image className='rounded-lg transition-transform duration-200 hover:scale-110' src='/assests/images/Logo.svg' height={27} width={168} alt='Cottachain Logo' />
         </div>
-        <div className='flex text-white items-center justify-center gap-10'>
+        <div className='flex text-white items-center justify-center gap-8 font-thin text-[1rem] text-opacity-72'>
           <p className="cursor-pointer hover:text-yellow-400 transition" onClick={() => handleScroll('howitworks-section')}>How it works</p>
           <p className="cursor-pointer hover:text-yellow-400 transition" onClick={() => handleScroll('about-section')}>Why Cottachain</p>
           <p className="cursor-pointer hover:text-yellow-400 transition">Docs</p>
@@ -94,7 +94,7 @@ const Navbar = () => {
             )} */}
           </div>
         </div>
-        <button className='font-medium border border-white text-white shadow-lg rounded-lg h-auto w-auto text-[0.8rem] p-3 hover:bg-yellow-400 hover:text-[#452B1F] transition'>Generate Reputation</button>
+        <button className='font-medium bg-white/20 text-white shadow-lg rounded-lg h-auto w-auto text-[0.9rem] p-3 transition font-med'>Launch App</button>
       </div>
     </div>
   );
