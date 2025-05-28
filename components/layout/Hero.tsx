@@ -61,7 +61,7 @@ const Hero = () => {
                         <p className='text-[2rem] md:text-[2.5rem] mt-20 font-bold leading-tight text-white text-left leading-loose'>Redefining Digital Trust with a Portable, Decentralized Reputation System</p>
                         <p className='text-gray-300 max-w-[85%] text-md md:text-lg text-left mt-7'>COTTACHAIN is the future of online
                             reputation secure, verifiable,
-                            and truly yours. Yours trust score follows you across DeFi,
+                            and truly yours. Your trust score follows you across DeFi,
                             DAOS, e-commerce and social media.</p>
                     </div>
 

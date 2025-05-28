@@ -47,21 +47,22 @@ const Navbar = () => {
 
   return (
     <div>
-      <div className="bg-white/10 mb-[30%] text-[0.8rem] z-20 border-none shadow-lg md:w-[70%] w-full p-2 max-w-[80%] left-1/2 transform -translate-x-1/2 flex items-center justify-between fixed top-[4%] backdrop-blur-md border border-white/30 h-[64px] rounded-[20px] shadow-lg px-6">
-        <div>
+      <div className="bg-white/10 mb-[30%] text-[0.8rem] z-20 border-none shadow-lg md:w-[70%] w-full p-2 max-w-[80%] left-1/2 transform -translate-x-1/2 flex items-center md:justify-between justify-between fixed top-[4%] backdrop-blur-md border border-white/30 h-[64px] rounded-[20px] shadow-lg px-6">
+        {/* Logo */}
+        <div className="flex-shrink-0">
           <Image className='rounded-lg transition-transform duration-200 hover:scale-110' src='/assests/images/Logo.svg' height={27} width={168} alt='Cottachain Logo' />
         </div>
         {/* Desktop nav */}
-        <div className='hidden md:flex text-white items-center justify-center gap-8 font-thin text-[1rem] text-opacity-72'>
-          <p className="cursor-pointer hover:text-yellow-400 transition" onClick={() => handleScroll('howitworks-section')}>How it works</p>
-          <p className="cursor-pointer hover:text-yellow-400 transition" onClick={() => handleScroll('about-section')}>Why Cottachain</p>
-          <p className="cursor-pointer hover:text-yellow-400 transition">Docs</p>
+        <div className='hidden md:flex flex-1 items-center justify-center gap-8 font-thin text-[1rem] text-opacity-72'>
+          <p className="cursor-pointer hover:text-yellow-400 transition text-white" onClick={() => handleScroll('how-cottachain')}>How it works</p>
+          <p className="cursor-pointer hover:text-yellow-400 transition text-white" onClick={() => handleScroll('howitworks-section')}>Why Cottachain</p>
+          <p className="cursor-pointer hover:text-yellow-400 transition text-white">Docs</p>
           <div className="relative"
             onMouseEnter={() => setShowSocial(true)}
             onMouseLeave={() => setTimeout(() => { if (!socialHover) setShowSocial(false); }, 200)}
             ref={socialRef}
           >
-            <p className="cursor-pointer hover:text-yellow-400 transition">Community</p>
+            <p className="cursor-pointer hover:text-yellow-400 transition text-white">Community</p>
             {showSocial && (
               <div
                 className="absolute left-1/2 -translate-x-1/2 top-full mt-2 bg-white/10 backdrop-blur-md border border-white/30 rounded-xl shadow-lg px-4 py-2 flex flex-col items-start z-50 min-w-[160px] animate-fade-in"
@@ -85,8 +86,11 @@ const Navbar = () => {
             )}
           </div>
           <div className="relative" ref={contactRef}>
-            <p className="cursor-pointer hover:text-yellow-400 transition">Token</p>
+            <p className="cursor-pointer hover:text-yellow-400 transition text-white">Token</p>
           </div>
+        </div>
+        {/* Launch App button (desktop only) */}
+        <div className="hidden md:flex flex-shrink-0">
           <button
             className='font-medium bg-white/20 text-white shadow-lg rounded-lg h-auto w-auto text-[0.9rem] p-3 transition font-med ml-4'
             onClick={handleFeatureToast}
@@ -96,7 +100,7 @@ const Navbar = () => {
         </div>
         {/* Mobile nav icon and Launch App button */}
         <div className="flex md:hidden items-center gap-2">
-          <button className='font-medium bg-white/20 text-white shadow-lg rounded-lg h-auto w-auto text-[0.9rem] p-3 transition font-med hidden'>Launch App</button>
+          <button className='font-medium hidden md:block bg-white/20 text-white shadow-lg rounded-lg h-auto w-auto text-[0.9rem] p-3 transition font-med'>Launch App</button>
           <button className="flex items-center justify-center text-white text-3xl focus:outline-none" onClick={() => setSidebarOpen(true)}>
             <Icon icon="mdi:menu" />
           </button>
@@ -117,7 +121,7 @@ const Navbar = () => {
           <p className="cursor-pointer hover:text-yellow-400 transition" onClick={() => { handleScroll('about-section'); setSidebarOpen(false); }}>Why Cottachain</p>
           <p className="cursor-pointer hover:text-yellow-400 transition">Docs</p>
           <div className="flex flex-col gap-2">
-            <span className="text-gray-400 text-xs mb-1">Community</span>
+            <span className="text-white text-xs mb-1">Community</span>
             {socials.map((s, i) => (
               <a
                 key={s.name}
@@ -128,7 +132,7 @@ const Navbar = () => {
                 style={{ borderBottom: i !== socials.length - 1 ? '1px solid rgba(255,255,255,0.1)' : 'none' }}
                 onClick={() => setSidebarOpen(false)}
               >
-                {s.name}
+                <p className='text-white'>{s.name}</p>
               </a>
             ))}
           </div>

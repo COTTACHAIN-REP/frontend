@@ -80,14 +80,16 @@ const WhyCottachain = () => {
 
     return (
         <div className="flex flex-col items-center p-2 md:p-3 justify-center mt-10 w-full">
-            <div className="text-white mt-4 text-[1.7rem] md:text-[2.5rem] font-bold text-center w-full"> Why Cottchain</div>
+            
+            <div className="text-white mt-4 text-[1.7rem] md:text-[2.5rem] font-bold text-center w-full"> Why Cottachain</div>
             <p className="text-center w-full text-gray-200 leading-loose mt-5 mb-10 text-[0.95rem] md:text-[1rem] md:w-[70%] mb-[60px]">Reputation shouldn’t be locked in platforms or prone to manipulation. COTTACHAIN makes it portable, secure, and verifiable powered by blockchain, decentralized identity, and zero-knowledge proofs. Whether you are in DeFi, DAOs, or online marketplaces, your trust score moves with you private, tamper-proof, and yours to control.</p>
 
             <div className="w-full flex justify-center items-center">
                 <Image src="/Frame37.svg" alt="image" className="w-full max-w-[400px] md:max-w-[80%] h-auto" height={1000} width={1000}/>
             </div>
+            <div id="how-cottachain"></div>
 
-            <div className="text-white my-20 md:my-7 md:mt-[180px] text-[1.7rem] md:text-[2.5rem] max-w-full md:max-w-[70%] font-bold text-center"> How Cottachain Delivers Trust Through Reputation Score</div>
+            <div  className="text-white my-20 md:my-7 md:mt-[180px] text-[1.7rem] md:text-[2.5rem] max-w-full md:max-w-[70%] font-bold text-center"> How Cottachain Delivers Trust Through Reputation Score</div>
 
             <div className="relative mt-10 md:mt-[150px] w-full flex justify-center items-center">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-y-24 md:gap-5 md:gap-y-24 w-[80%]">

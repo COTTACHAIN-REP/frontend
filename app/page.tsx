@@ -6,7 +6,7 @@ import FAQ from '@/components/sections/FAQ';
 export default function Home() {
   return (
        <div
-      className="min-h-screen flex flex-col items-center justify-center"
+      className="flex flex-col items-center justify-center"
       style={{
     background: 'linear-gradient(to bottom, #211AA7 -100%, #121229 100%)',
   }}
