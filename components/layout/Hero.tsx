@@ -67,9 +67,10 @@ const Hero = () => {
 
                     <div className='mt-7 flex gap-5 relative z-10 mb-10'>
                         <button
-                            className='md:bg-[#B68524] text-[1rem] shadow-lg text-white h-auto w-auto py-4 md:w-[250px] w-auto px-10 rounded-[40px] md:rounded-[10px] transition-transform duration-200 hover:scale-105 hover:bg-yellow-700 md:border-none border border-white text-[0.8rem]'
+                            className='md:bg-[#B68524] text-[1rem] shadow-lg text-white h-auto w-auto py-4 md:w-[260px] w-auto px-10 rounded-[40px] md:rounded-[10px] transition-transform duration-200 hover:scale-105 hover:bg-yellow-700 md:border-none border border-white text-[0.8rem] flex gap-4 items-center'
                             onClick={handleFeatureToast}
                         >
+                            <Image src="/solana.png" alt='solana logo' height={30} width={30} className='rounded-full' />
                             Login with Solana
                         </button>
                         {/* <button id="about-section" className='text-[#452B1F] text-sm shadow-lg bg-yellow-500 h-auto text-[1.1rem] w-auto py-4 px-10 rounded-[40px] transition-transform duration-200 hover:scale-105 hover:bg-yellow-400'>Explore whitepaper</button> */}
