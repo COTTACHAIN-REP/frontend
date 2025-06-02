@@ -79,12 +79,12 @@ const WhyCottachain = () => {
     const prevStep = () => setCurrent((prev) => (prev - 1 + steps.length) % steps.length);
 
     return (
-        <div className="flex flex-col items-center p-2 md:p-3 justify-center mt-10 w-full">
+        <div className="flex flex-col items-center p-2 md:p-3 justify-center mt-10 md:mt-20 w-full">
             
             <div className="text-white mt-4 text-[1.7rem] md:text-[2.5rem] font-bold text-center w-full"> Why Cottachain</div>
-            <p className="text-center w-full text-gray-200 leading-loose mt-5 mb-10 text-[0.95rem] md:text-[1rem] md:w-[70%] mb-[60px]">Reputation shouldn’t be locked in platforms or prone to manipulation. COTTACHAIN makes it portable, secure, and verifiable powered by blockchain, decentralized identity, and zero-knowledge proofs. Whether you are in DeFi, DAOs, or online marketplaces, your trust score moves with you private, tamper-proof, and yours to control.</p>
+            <p className="text-center w-full text-gray-200 leading-loose mt-5 mb-10 text-[0.95rem] md:text-[1rem] md:w-[70%] mb-[60px]">Reputation shouldn’t be trapped or manipulated. COTTACHAIN makes it portable, secure, and verifiable across Web3 powered by blockchain, decentralized identity, and zero-knowledge proofs. Your trust score is private, tamper-proof, and fully yours</p>
 
-            <div className="w-full flex justify-center items-center">
+            <div className="w-full flex justify-center mt-10 items-center">
                 <Image src="/Frame37.svg" alt="image" className="w-full max-w-[400px] md:max-w-[80%] h-auto" height={1000} width={1000}/>
             </div>
             <div id="how-cottachain"></div>
@@ -113,9 +113,9 @@ const WhyCottachain = () => {
                 </div>
             </div>
 
-            <div className="text-white mt-20 md:mt-[150px] text-[2rem] md:text-[2.5rem] max-w-full md:max-w-[70%] font-bold text-center"> How to Generate Reputation Score</div>
+            <div className="text-white mt-20 md:mt-[200px] text-[2rem] md:text-[2.5rem] max-w-full md:max-w-[70%] font-bold text-center"> How to Generate Reputation Score</div>
 
-            <div className="w-full flex flex-col items-center justify-center mt-7">
+            <div className="w-full flex flex-col items-center justify-center mt-[100px]">
                 <div className="md:bg-gray-200 bg-gray-300 w-full max-w-[95vw] md:max-w-[400px] p-3 md:p-5 h-auto rounded-xl relative">
                     <div className="flex flex-col items-center justify-center gap-2 min-h-[220px]">
                         <div className="flex items-center w-full font-bold justify-center gap-5">
@@ -136,9 +136,9 @@ const WhyCottachain = () => {
                 </div>
             </div>
 
-            <div className="text-white mt-[100px] text-[2rem] md:text-[2.5rem] max-w-full md:max-w-[70%] font-bold text-center"> Our Infrastrcuture and Reputation System</div>
+            <div className="text-white mt-[150px] text-[2rem] md:text-[2.5rem] max-w-full md:max-w-[70%] font-bold text-center"> Our Infrastrcuture and Reputation System</div>
 
-            <p className="text-center leading-loose mt-5 mb-10 text-gray-200 text-[0.95rem] md:text-[1rem] w-full md:max-w-[70%]">COTTACHAIN is built on Solana for speed, scalability, and low-cost performance. Our decentralized reputation system uses smart contracts, zero-knowledge proofs, and decentralized identity (DID) to ensure every trust score is secure, private, and tamper-proof. It’s infrastructure designed for fairness, ownership, and Web3 interoperability making your reputation portable across apps, DAOs, and marketplaces.</p>
+            <p className="text-center leading-loose mt-10 mb-10 text-gray-200 text-[0.95rem] md:text-[1rem] w-full md:max-w-[70%]">COTTACHAIN is built on Solana for speed, scalability, and low-cost performance. Our decentralized reputation system uses smart contracts, zero-knowledge proofs, and decentralized identity (DID) to ensure every trust score is secure, private, and tamper-proof. It’s infrastructure designed for fairness, ownership, and Web3 interoperability making your reputation portable across apps, DAOs, and marketplaces.</p>
 
             <div className="relative mt-10 md:mt-[50px] flex flex-col md:flex-row gap-8 justify-center items-center">
                 <div className="bg-gradient-to-r relative h-[320px] w-full max-w-[95vw] md:max-w-[500px] md:h-[290px] md:w-[500px] from-orange-500 to-blue-200 p-[1px] rounded-[10px] mx-auto">

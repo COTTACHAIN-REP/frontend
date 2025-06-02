@@ -29,15 +29,16 @@ const About = () => {
     const fade = useScrollFade();
     return (
         <motion.div
-            
+
             ref={fade.ref}
             animate={fade.controls}
             initial={{ opacity: 0, y: 40 }}
-            className="flex flex-col items-center p-4 justify-center md:mt-10"
+            className="flex flex-col items-center p-4 justify-center md:mt-20"
         >
-            
+
             <div className="text-white mt-4 md:text-[2.5rem] text-[1.7rem] font-bold"> About us</div>
-            <p className="text-center leading-loose mt-5 mb-10 text-white text-[1rem] md:max-w-[70%] md:w-[70%] w-full">COTTACHAIN is a decentralized reputation protocol built on Solana. We make your trust score portable, verifiable, and private powered by on-chain data, zero-knowledge proofs, and decentralized identity. From DeFi to DAOs and beyond, your reputation goes where you <span > go.</span></p>
+            <p className="text-center leading-loose mt-5 mb-10 text-white text-[1rem] md:max-w-[70%] md:w-[70%] w-full">
+                COTTACHAIN is Solana’s trust layer, built to fight Web3 fraud with portable, verifiable reputation scores based on on-chain actions. Fully integrated with the Solana Attestation Service (SAS), it secures DAOs, DeFi, NFTs, and gaming through a decentralized, tamper-proof reputation system</p>
 
             <div id="howitworks-section"></div>
         </motion.div>

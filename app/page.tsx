@@ -5,16 +5,20 @@ import FAQ from '@/components/sections/FAQ';
 // import Testimonials from '@/components/sections/Testimonials';
 export default function Home() {
   return (
-       <div
+    <div
       className="flex flex-col items-center justify-center"
       style={{
-    background: 'linear-gradient(to bottom, #211AA7 -100%, #121229 100%)',
-  }}
+        background: 'linear-gradient(to bottom, #211AA7 -100%, #121229 100%)',
+      }}
     >
-      <Hero />
-      <HowItWorks />
-      <FAQ />
-      <Footer />
+      <div className='md:w-[75%] '>
+
+        <Hero />
+        <HowItWorks />
+        <FAQ />
+        <Footer />
+      </div>
+
     </div>
   );
 }

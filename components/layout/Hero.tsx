@@ -52,22 +52,21 @@ const Hero = () => {
             initial={{ opacity: 0, y: 40 }}
             style={{ backgroundImage: 'url(/assests/images/cottachainbg.svg)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}
             className='relative pt-10 md:pt-[90px] flex-col flex items-center justify-center '>
-            <div className='flex-col flex md:flex-row relative justify-center items-center md:pl-14 p-5'>
+            <div className='flex-col flex md:flex-row relative justify-center items-center md:pl-14 mt-14 gap-14 p-5'>
 
                 {/* Net pattern overlay */}
                 {/* <div className="pointer-events-none absolute inset-0 z-0 bg-[linear-gradient(#d1d5db_1px,transparent_1px),linear-gradient(to_right,#d1d5db_1px,#fff_1px)] bg-[size:20px_20px] opacity-10" /> */}
                 <div>
                     <div className="flex justify-start items-start flex-col relative z-10">
-                        <p className='text-[2rem] md:text-[2.5rem] mt-20 font-bold leading-tight text-white text-left leading-loose'>Redefining Digital Trust with a Portable, Decentralized Reputation System</p>
-                        <p className='text-gray-300 max-w-[85%] text-md md:text-lg text-left mt-7'>COTTACHAIN is the future of online
-                            reputation secure, verifiable,
-                            and truly yours. Your trust score follows you across DeFi,
-                            DAOS, e-commerce and social media.</p>
+                        <p className='text-[2rem] md:text-[2.5rem] mt-20 font-bold leading-tight text-white text-left leading-loose'>
+                            Redefining trust with decentralized, portable reputation</p>
+                        <p className='text-gray-300 max-w-[85%] text-md md:text-lg text-left mt-7'>
+                            COTTACHAIN is a verifiable reputation system for DeFi, DAOs, e-commerce, and social platforms</p>
                     </div>
 
                     <div className='mt-7 flex gap-5 relative z-10 mb-10'>
                         <button
-                            className='md:bg-[#B68524] text-[1rem] shadow-lg text-white h-auto w-auto py-4 md:w-[260px] w-auto px-10 rounded-[40px] md:rounded-[10px] transition-transform duration-200 hover:scale-105 hover:bg-yellow-700 md:border-none border border-white text-[0.8rem] flex gap-4 items-center'
+                            className='md:bg-yellow-500 text-[1rem] shadow-lg text-white h-auto w-auto py-4 md:w-[290px] w-auto px-10 rounded-[40px] md:rounded-[10px] transition-transform duration-200 hover:scale-105 hover:bg-yellow-700 md:border-none border border-white text-[0.8rem] flex gap-4 items-center'
                             onClick={handleFeatureToast}
                         >
                             <Image src="/solana.png" alt='solana logo' height={30} width={30} className='rounded-full' />
@@ -77,7 +76,7 @@ const Hero = () => {
                     </div>
                 </div>
 
-                <Image src='/Hero1.svg' alt='chainimage' className='mt-10 transition-transform duration-200 hover:scale-105 w-full h-auto md:h-[70%] md:w-[50%]' height={1000} width={1000} />
+                <Image src='/Hero1.svg' alt='chainimage' className='mt-10 transition-transform duration-200 hover:scale-105 w-full h-auto md:h-[80%] md:w-[60%]' height={1000} width={1000} />
 
             </div>
             <About />

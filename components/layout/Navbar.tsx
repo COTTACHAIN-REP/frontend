@@ -47,7 +47,7 @@ const Navbar = () => {
 
   return (
     <div>
-      <div className="bg-white/10 mb-[30%] text-[0.8rem] z-20 border-none shadow-lg md:w-[70%] w-full p-2 max-w-[80%] left-1/2 transform -translate-x-1/2 flex items-center md:justify-between justify-between fixed top-[4%] backdrop-blur-md border border-white/30 h-[64px] rounded-[20px] shadow-lg px-6">
+      <div className="bg-white/10 mb-[30%] text-[0.8rem] z-20 border-none shadow-lg md:w-[65%] 2xl:w-[54%] w-full p-2 max-w-[90%] left-1/2 transform -translate-x-1/2 flex items-center md:justify-between justify-between fixed top-[4%] backdrop-blur-md border border-white/30 h-[64px] rounded-[20px] shadow-lg px-6">
         {/* Logo */}
         <div className="flex-shrink-0">
           <Image className='rounded-lg transition-transform duration-200 hover:scale-110' src='/assests/images/Logo.svg' height={27} width={168} alt='Cottachain Logo' />
