@@ -4,11 +4,12 @@ import Image from 'next/image';
 import { Icon } from '@iconify/react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { usePathname } from 'next/navigation';
+import Link from 'next/link';
 
 const socials = [
-  { name: 'X', url: 'https://x.com' },
-  { name: 'Instagram', url: 'https://instagram.com' },
-  { name: 'Facebook', url: 'https://facebook.com' },
+  { name: 'X', url: 'https://x.com/COTTACHAIN' },
+  { name: 'Discord', url: 'https://discord.com/KCygwKz4vV' },
 ];
 // const contact = [
 //   { name: 'Email', value: 'info@cottachain.com' },
@@ -23,6 +24,9 @@ const Navbar = () => {
   const [socialHover, setSocialHover] = React.useState(false);
   // const [contactHover, setContactHover] = React.useState(false);
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const pathname = usePathname();
+  const isDocRoute = pathname.startsWith('/doc');
+  const isTokenRoute = pathname.startsWith('/token');
 
   // Smooth scroll handler
   const handleScroll = (id: string) => {
@@ -47,60 +51,106 @@ const Navbar = () => {
 
   return (
     <div>
-      <div className="bg-white/10 mb-[30%] text-[0.8rem] z-20 border-none shadow-lg md:w-[65%] 2xl:w-[54%] w-full p-2 max-w-[90%] left-1/2 transform -translate-x-1/2 flex items-center md:justify-between justify-between fixed top-[4%] backdrop-blur-md border border-white/30 h-[64px] rounded-[20px] shadow-lg px-6">
+      <div className={`${isDocRoute ? 'bg-[#302E76]' : 'bg-white/10'} mb-[30%] text-[0.8rem] z-20 border-none shadow-lg md:w-[65%] 2xl:w-[54%] w-full p-2 max-w-[90%] left-1/2 transform -translate-x-1/2 flex items-center md:justify-between justify-between fixed top-[4%] backdrop-blur-md border border-white/30 h-[64px] rounded-[20px] shadow-lg px-6`}>
         {/* Logo */}
         <div className="flex-shrink-0">
           <Image className='rounded-lg transition-transform duration-200 hover:scale-110' src='/assests/images/Logo.svg' height={27} width={168} alt='Cottachain Logo' />
         </div>
         {/* Desktop nav */}
-        <div className='hidden md:flex flex-1 items-center justify-center gap-8 font-medium text-[1rem] text-opacity-72'>
-          <p className="cursor-pointer hover:text-yellow-400 transition text-white" onClick={() => handleScroll('how-cottachain')}>How it works</p>
-          <p className="cursor-pointer hover:text-yellow-400 transition text-white" onClick={() => handleScroll('howitworks-section')}>Why Cottachain</p>
-          <p className="cursor-pointer hover:text-yellow-400 transition text-white">Docs</p>
-          <div className="relative"
-            onMouseEnter={() => setShowSocial(true)}
-            onMouseLeave={() => setTimeout(() => { if (!socialHover) setShowSocial(false); }, 200)}
-            ref={socialRef}
-          >
-            <p className="cursor-pointer hover:text-yellow-400 transition text-white">Community</p>
-            {showSocial && (
-              <div
-                className="absolute left-1/2 -translate-x-1/2 top-full mt-2 bg-white/10 backdrop-blur-md border border-white/30 rounded-xl shadow-lg px-4 py-2 flex flex-col items-start z-50 min-w-[160px] animate-fade-in"
-                style={{ transition: 'opacity 0.2s', pointerEvents: 'auto' }}
-                onMouseEnter={() => { setSocialHover(true); setShowSocial(true); }}
-                onMouseLeave={() => { setSocialHover(false); setShowSocial(false); }}
+        <div className='hidden md:flex flex-1 items-center justify-center gap-8 font-medium text-[0.9rem] text-opacity-72'>
+          {isDocRoute ? (
+            <>
+              <p className="cursor-pointer hover:text-yellow-400 transition text-white">The basics</p>
+              <p className="cursor-pointer hover:text-yellow-400 transition text-white">Cottachain protocol</p>
+              <p className="cursor-pointer hover:text-yellow-400 transition text-white">Services</p>
+              <p className="cursor-pointer hover:text-yellow-400 transition text-white">Contracts</p>
+              <p className="cursor-pointer hover:text-yellow-400 transition text-white">Publications</p>
+            </>
+          ) : isTokenRoute ? (
+            <>
+              <p className="text-white hover:text-yellow-500 cursor-pointer">Tokenomics</p>
+              <p className="text-white hover:text-yellow-500 cursor-pointer">Utility & Use Cases</p>
+              <p className="text-white hover:text-yellow-500 cursor-pointer">How to Acquire Tokens</p>
+            </>
+          ) : (
+            <>
+              <p className="cursor-pointer hover:text-yellow-400 transition text-white" onClick={() => handleScroll('how-cottachain')}>How it works</p>
+              <p className="cursor-pointer hover:text-yellow-400 transition text-white" onClick={() => handleScroll('howitworks-section')}>Why Cottachain</p>
+              <Link href="/doc" passHref legacyBehavior>
+                <p className="cursor-pointer hover:text-yellow-400 transition text-white">Docs</p>
+              </Link>
+              <div className="relative"
+                onMouseEnter={() => setShowSocial(true)}
+                onMouseLeave={() => setTimeout(() => { if (!socialHover) setShowSocial(false); }, 200)}
+                ref={socialRef}
               >
-                {socials.map((s, i) => (
-                  <a
-                    key={s.name}
-                    href={s.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hover:text-yellow-400 transition w-full py-1 px-2 text-left"
-                    style={{ borderBottom: i !== socials.length - 1 ? '1px solid rgba(255,255,255,0.2)' : 'none' }}
+                <p className="cursor-pointer hover:text-yellow-400 transition text-white">Community</p>
+                {showSocial && (
+                  <div
+                    className="absolute left-1/2 -translate-x-1/2 top-full mt-2 bg-white/10 backdrop-blur-md border border-white/30 rounded-xl shadow-lg px-4 py-2 flex flex-col items-start z-50 min-w-[160px] animate-fade-in"
+                    style={{ transition: 'opacity 0.2s', pointerEvents: 'auto' }}
+                    onMouseEnter={() => { setSocialHover(true); setShowSocial(true); }}
+                    onMouseLeave={() => { setSocialHover(false); setShowSocial(false); }}
                   >
-                  <p className='text-white hover:text-yellow-500'>  {s.name}</p>
-                  </a>
-                ))}
+                    {socials.map((s, i) => (
+                      <a
+                        key={s.name}
+                        href={s.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="hover:text-yellow-400 transition w-full py-1 px-2 text-left"
+                        style={{ borderBottom: i !== socials.length - 1 ? '1px solid rgba(255,255,255,0.2)' : 'none' }}
+                      >
+                        <p className='text-white hover:text-yellow-500'>  {s.name}</p>
+                      </a>
+                    ))}
+                  </div>
+                )}
               </div>
-            )}
-          </div>
-          <div className="relative" ref={contactRef}>
-            <p className="cursor-pointer hover:text-yellow-400 transition text-white">Token</p>
-          </div>
+              <div className="relative" ref={contactRef}>
+                <Link href="/token">
+                  <p className={`cursor-pointer hover:text-yellow-400 transition text-white`}>Token</p>
+                </Link>
+              </div>
+            </>
+          )}
         </div>
-        {/* Launch App button (desktop only) */}
-        <div className="hidden md:flex flex-shrink-0">
-          <button
-            className='font-medium bg-white/20 text-white shadow-lg rounded-lg h-auto w-auto text-[0.9rem] p-3 transition font-med ml-4'
-            onClick={handleFeatureToast}
-          >
-            Launch App
-          </button>
-        </div>
+        {/* Launch App button (desktop only) or Home button for doc/token route */}
+        {(isDocRoute || isTokenRoute) ? (
+          <div className="hidden md:flex flex-shrink-0">
+            <Link href="/" passHref legacyBehavior>
+              <button
+                className="flex items-center gap-1 bg-white/20 text-white shadow-lg rounded-lg h-auto w-auto text-[0.9rem] p-3 transition font-med ml-4"
+              >
+                <Icon icon="mdi:home" className="text-xl" />
+                <span>Home</span>
+              </button>
+            </Link>
+          </div>
+        ) : (
+          <div className="hidden md:flex flex-shrink-0">
+            <button
+              className='font-medium bg-white/20 text-white shadow-lg rounded-lg h-auto w-auto text-[0.9rem] p-3 transition font-med ml-4'
+              onClick={handleFeatureToast}
+            >
+              Launch App
+            </button>
+          </div>
+        )}
         {/* Mobile nav icon and Launch App button */}
         <div className="flex md:hidden items-center gap-2">
-          <button className='font-medium hidden md:block bg-white/20 text-white shadow-lg rounded-lg h-auto w-auto text-[0.9rem] p-3 transition font-med'>Launch App</button>
+          {/* Hide Launch App button on doc/token route, show Home icon+text instead */}
+          {(isDocRoute || isTokenRoute) ? (
+            <button
+              className="flex hidden items-center gap-1 bg-white/20 text-white shadow-lg rounded-lg h-auto w-auto text-[0.9rem] p-3 transition font-med"
+              onClick={() => window.location.href = '/'}
+            >
+              <Icon icon="mdi:home" className="text-xl" />
+              <span>Home</span>
+            </button>
+          ) : (
+            <button className='font-medium hidden md:block bg-white/20 text-white shadow-lg rounded-lg h-auto w-auto text-[0.9rem] p-3 transition font-med'>Launch App</button>
+          )}
           <button className="flex items-center justify-center text-white text-3xl focus:outline-none" onClick={() => setSidebarOpen(true)}>
             <Icon icon="mdi:menu" />
           </button>
@@ -117,35 +167,69 @@ const Navbar = () => {
           <button className="text-white text-2xl" onClick={() => setSidebarOpen(false)}><Icon icon="mdi:close" /></button>
         </div>
         <div className="flex flex-col gap-6 px-6 py-8 text-white">
-          <p className="cursor-pointer hover:text-yellow-400 transition" onClick={() => { handleScroll('howitworks-section'); setSidebarOpen(false); }}>How it works</p>
-          <p className="cursor-pointer hover:text-yellow-400 transition" onClick={() => { handleScroll('about-section'); setSidebarOpen(false); }}>Why Cottachain</p>
-          <p className="cursor-pointer hover:text-yellow-400 transition">Docs</p>
-          <div className="flex flex-col gap-2">
-            <span className="text-white text-xs mb-1">Community</span>
-            {socials.map((s, i) => (
-              <a
-                key={s.name}
-                href={s.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-yellow-400 transition w-full py-1 px-2 text-left"
-                style={{ borderBottom: i !== socials.length - 1 ? '1px solid rgba(255,255,255,0.1)' : 'none' }}
-                onClick={() => setSidebarOpen(false)}
+          {isDocRoute ? (
+            <>
+              <p className="cursor-pointer hover:text-yellow-400 transition">The basics</p>
+              <p className="cursor-pointer hover:text-yellow-400 transition">Cottachain protocol</p>
+              <p className="cursor-pointer hover:text-yellow-400 transition">Services</p>
+              <p className="cursor-pointer hover:text-yellow-400 transition">Contracts</p>
+              <p className="cursor-pointer hover:text-yellow-400 transition">Publications</p>
+              <button
+                className="flex items-center gap-1 bg-white/20 text-white shadow-lg rounded-lg h-auto w-auto text-[0.9rem] p-3 transition font-med mt-4"
+                onClick={() => { setSidebarOpen(false); window.location.href = '/'; }}
               >
-                <p className='text-white'>{s.name}</p>
-              </a>
-            ))}
-          </div>
-          <div>
-            <span className="text-gray-400 text-xs mb-1">Token</span>
-            <p className="cursor-pointer hover:text-yellow-400 transition">Token</p>
-          </div>
-          <button
-            className='font-medium bg-white/20 text-white shadow-lg rounded-lg h-auto w-auto text-[0.9rem] p-3 transition font-med mt-4'
-            onClick={handleFeatureToast}
-          >
-            Launch App
-          </button>
+                <Icon icon="mdi:home" className="text-xl" />
+                <span>Home</span>
+              </button>
+            </>
+          ) : isTokenRoute ? (
+            <>
+              <p className="text-white hover:text-yellow-500 cursor-pointer">Tokenomics</p>
+              <p className="text-white hover:text-yellow-500 cursor-pointer">Utility & Use Cases</p>
+              <p className="text-white hover:text-yellow-500 cursor-pointer">How to Acquire Tokens</p>
+              <button
+                className="flex items-center gap-1 bg-white/20 text-white shadow-lg rounded-lg h-auto w-auto text-[0.9rem] p-3 transition font-med mt-4"
+                onClick={() => { setSidebarOpen(false); window.location.href = '/'; }}
+              >
+                <Icon icon="mdi:home" className="text-xl" />
+                <span>Home</span>
+              </button>
+            </>
+          ) : (
+            <>
+              <p className="cursor-pointer hover:text-yellow-400 transition" onClick={() => { handleScroll('howitworks-section'); setSidebarOpen(false); }}>How it works</p>
+              <p className="cursor-pointer hover:text-yellow-400 transition" onClick={() => { handleScroll('about-section'); setSidebarOpen(false); }}>Why Cottachain</p>
+             <Link href="/doc"> <p className="cursor-pointer hover:text-yellow-400 transition">Docs</p> </Link>
+              <div className="flex flex-col gap-2">
+                <span className="text-white text-xs mb-1">Community</span>
+                {socials.map((s, i) => (
+                  <a
+                    key={s.name}
+                    href={s.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-yellow-400 transition w-full py-1 px-2 text-left"
+                    style={{ borderBottom: i !== socials.length - 1 ? '1px solid rgba(255,255,255,0.1)' : 'none' }}
+                    onClick={() => setSidebarOpen(false)}
+                  >
+                    <p className='text-white'>{s.name}</p>
+                  </a>
+                ))}
+              </div>
+              <div>
+                <span className="text-gray-400 text-xs mb-1">Token</span>
+                <Link href="/token">
+                  <p className={`cursor-pointer hover:text-yellow-400 transition${isTokenRoute ? ' text-yellow-500' : ''}`}>Token</p>
+                </Link>
+              </div>
+              <button
+                className='font-medium bg-white/20 text-white shadow-lg rounded-lg h-auto w-auto text-[0.9rem] p-3 transition font-med mt-4'
+                onClick={handleFeatureToast}
+              >
+                Launch App
+              </button>
+            </>
+          )}
         </div>
       </div>
       <ToastContainer />

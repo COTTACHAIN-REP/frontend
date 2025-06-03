@@ -66,7 +66,7 @@ const Hero = () => {
 
                     <div className='mt-7 flex gap-5 relative z-10 mb-10'>
                         <button
-                            className='md:bg-yellow-500 text-[1rem] shadow-lg text-white h-auto w-auto py-4 md:w-[290px] w-auto px-10 rounded-[40px] md:rounded-[10px] transition-transform duration-200 hover:scale-105 hover:bg-yellow-700 md:border-none border border-white text-[0.8rem] flex gap-4 items-center'
+                            className='md:bg-[#5A5892] text-[1rem] shadow-lg text-white h-auto w-auto py-4 md:w-[290px] w-auto px-10 rounded-[40px] md:rounded-[10px] transition-transform duration-200 hover:scale-105 hover:bg-yellow-700 md:border-none border border-white text-[0.8rem] flex gap-4 items-center'
                             onClick={handleFeatureToast}
                         >
                             <Image src="/solana.png" alt='solana logo' height={30} width={30} className='rounded-full' />

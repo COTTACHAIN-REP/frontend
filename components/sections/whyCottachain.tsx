@@ -92,7 +92,7 @@ const WhyCottachain = () => {
             <div  className="text-white my-20 md:my-7 md:mt-[180px] text-[1.7rem] md:text-[2.5rem] max-w-full md:max-w-[70%] font-bold text-center"> How Cottachain Delivers Trust Through Reputation Score</div>
 
             <div className="relative mt-10 md:mt-[150px] w-full flex justify-center items-center">
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-y-24 md:gap-5 md:gap-y-24 w-[80%]">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-y-24 md:gap-5 md:gap-y-24 w-[90%]">
                     {trustFeatures.map((item, idx) => (
                         <div key={idx} className="bg-gradient-to-r relative h-[320px] w-full max-w-[340px] md:h-[290px] md:w-[290px] from-orange-500 to-blue-200 p-[1px] rounded-[10px] mx-auto">
                             <div className="h-full rounded-[10px] p-2 w-full bg-gradient-to-b from-gray-800 to-gray-700 flex justify-center items-center flex-col">
@@ -165,7 +165,7 @@ const WhyCottachain = () => {
             </div>
 
             <div className="w-full flex flex-col items-center justify-center mt-10">
-                <Image src="/solana.svg" alt="solana" className="mt-10 animate-bounce transition-transform mt-24 duration-800 hover:scale-105 h-[200px] w-[200px] md:h-[350px] md:w-[350px]" height={1000} width={1000} />
+                <Image src="/Hero1.svg" alt="cottachain" className="mt-10 animate-bounce transition-transform mt-24 duration-800 hover:scale-105 h-[200px] w-[200px] md:h-[350px] md:w-[350px]" height={1000} width={1000} />
                 <p className="text-white text-[1.1rem] md:text-[1.3rem] mt-4">Data Sources</p>
                 <div className="flex gap-8 md:gap-20 mt-5 w-full justify-center items-center">
                     <div className="flex gap-3 flex-col justify-center items-center mt-5">

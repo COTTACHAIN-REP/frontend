@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <div
       className="flex flex-col items-center justify-center"
-      style={{
+     style={{
         background: 'linear-gradient(to bottom, #211AA7 -100%, #121229 100%)',
       }}
     >
