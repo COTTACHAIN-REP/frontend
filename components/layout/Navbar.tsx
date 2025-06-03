@@ -53,7 +53,7 @@ const Navbar = () => {
           <Image className='rounded-lg transition-transform duration-200 hover:scale-110' src='/assests/images/Logo.svg' height={27} width={168} alt='Cottachain Logo' />
         </div>
         {/* Desktop nav */}
-        <div className='hidden md:flex flex-1 items-center justify-center gap-8 font-thin text-[1rem] text-opacity-72'>
+        <div className='hidden md:flex flex-1 items-center justify-center gap-8 font-medium text-[1rem] text-opacity-72'>
           <p className="cursor-pointer hover:text-yellow-400 transition text-white" onClick={() => handleScroll('how-cottachain')}>How it works</p>
           <p className="cursor-pointer hover:text-yellow-400 transition text-white" onClick={() => handleScroll('howitworks-section')}>Why Cottachain</p>
           <p className="cursor-pointer hover:text-yellow-400 transition text-white">Docs</p>
@@ -79,7 +79,7 @@ const Navbar = () => {
                     className="hover:text-yellow-400 transition w-full py-1 px-2 text-left"
                     style={{ borderBottom: i !== socials.length - 1 ? '1px solid rgba(255,255,255,0.2)' : 'none' }}
                   >
-                    {s.name}
+                  <p className='text-white'>  {s.name}</p>
                   </a>
                 ))}
               </div>
