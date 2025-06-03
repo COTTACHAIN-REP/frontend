@@ -79,7 +79,7 @@ const Navbar = () => {
                     className="hover:text-yellow-400 transition w-full py-1 px-2 text-left"
                     style={{ borderBottom: i !== socials.length - 1 ? '1px solid rgba(255,255,255,0.2)' : 'none' }}
                   >
-                  <p className='text-white'>  {s.name}</p>
+                  <p className='text-white hover:text-yellow-500'>  {s.name}</p>
                   </a>
                 ))}
               </div>
