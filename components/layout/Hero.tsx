@@ -58,7 +58,7 @@ const Hero = () => {
                 {/* <div className="pointer-events-none absolute inset-0 z-0 bg-[linear-gradient(#d1d5db_1px,transparent_1px),linear-gradient(to_right,#d1d5db_1px,#fff_1px)] bg-[size:20px_20px] opacity-10" /> */}
                 <div>
                     <div className="flex justify-start items-start flex-col relative z-10">
-                        <p className='text-[2rem] md:text-[2.5rem] mt-20 font-bold leading-tight text-white text-left leading-loose'>
+                        <p className='text-[2rem] md:text-[3.5rem] mt-20 font-bold leading-tight text-white text-left leading-loose'>
                             Solana’s Ultimate Trust Layer</p>
                         <p className='text-gray-300 max-w-[85%] text-md md:text-lg text-left mt-7'>
                             Solana’s Ultimate Trust Layer.
