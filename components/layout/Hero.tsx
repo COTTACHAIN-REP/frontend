@@ -59,7 +59,7 @@ const Hero = () => {
                 <div>
                     <div className="flex justify-start items-start flex-col relative z-10">
                         <p className='text-[2rem] md:text-[2.5rem] mt-20 font-bold leading-tight text-white text-left leading-loose'>
-                            Redefining trust with decentralized, portable reputation</p>
+                            Solana’s Ultimate Trust Layer</p>
                         <p className='text-gray-300 max-w-[85%] text-md md:text-lg text-left mt-7'>
                             Solana’s Ultimate Trust Layer.
                             Combat Web3’s $1.5B Scam Crisis with Decentralized Reputation Scores.</p>
