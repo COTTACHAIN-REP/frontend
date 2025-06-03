@@ -61,7 +61,8 @@ const Hero = () => {
                         <p className='text-[2rem] md:text-[2.5rem] mt-20 font-bold leading-tight text-white text-left leading-loose'>
                             Redefining trust with decentralized, portable reputation</p>
                         <p className='text-gray-300 max-w-[85%] text-md md:text-lg text-left mt-7'>
-                            COTTACHAIN is a verifiable reputation system for DeFi, DAOs, e-commerce, and social platforms</p>
+                            Solana’s Ultimate Trust Layer.
+                            Combat Web3’s $1.5B Scam Crisis with Decentralized Reputation Scores.</p>
                     </div>
 
                     <div className='mt-7 flex gap-5 relative z-10 mb-10'>
