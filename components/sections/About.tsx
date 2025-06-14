@@ -33,7 +33,7 @@ const About = () => {
             ref={fade.ref}
             animate={fade.controls}
             initial={{ opacity: 0, y: 40 }}
-            className="flex flex-col items-center p-4 justify-center md:mt-20"
+            className="flex flex-col items-center p-4 justify-center md:mt-[200px]"
         >
 
             <div className="text-white mt-4 md:text-[2.5rem] text-[1.7rem] font-bold"> About us</div>

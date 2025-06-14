@@ -51,10 +51,10 @@ const Navbar = () => {
 
   return (
     <div>
-      <div className={`${isDocRoute ? 'bg-[#302E76]' : 'bg-white/10'} mb-[30%] text-[0.8rem] z-20 border-none shadow-lg md:w-[65%] 2xl:w-[54%] w-full p-2 max-w-[90%] left-1/2 transform -translate-x-1/2 flex items-center md:justify-between justify-between fixed top-[4%] backdrop-blur-md border border-white/30 h-[64px] rounded-[20px] shadow-lg px-6`}>
+      <div className={`${isDocRoute ? 'bg-[#302E76]' : 'bg-white/10'} mb-[30%] text-[0.8rem] z-20 border-none shadow-lg w-full p-2 flex items-center md:justify-between justify-between fixed backdrop-blur-md border border-white/30 h-[100px] md:px-14`}>
         {/* Logo */}
         <div className="flex-shrink-0">
-          <Image className='rounded-lg transition-transform duration-200 hover:scale-110' src='/assests/images/Logo.svg' height={27} width={168} alt='Cottachain Logo' />
+          <Image className='rounded-lg transition-transform duration-200 hover:scale-110' src='/assests/images/nav.svg' height={27} width={168} alt='Cottachain Logo' />
         </div>
         {/* Desktop nav */}
         <div className='hidden md:flex flex-1 items-center justify-center gap-8 font-medium text-[0.9rem] text-opacity-72'>
@@ -130,7 +130,7 @@ const Navbar = () => {
         ) : (
           <div className="hidden md:flex flex-shrink-0">
             <button
-              className='font-medium bg-white/20 text-white shadow-lg rounded-lg h-auto w-auto text-[0.9rem] p-3 transition font-med ml-4'
+              className='font-medium bg-black border border-[#F28C28] text-white shadow-lg rounded-lg h-auto w-auto text-[0.9rem] p-3 transition font-med ml-4'
               onClick={handleFeatureToast}
             >
               Launch App
@@ -149,7 +149,7 @@ const Navbar = () => {
               <span>Home</span>
             </button>
           ) : (
-            <button className='font-medium hidden md:block bg-white/20 text-white shadow-lg rounded-lg h-auto w-auto text-[0.9rem] p-3 transition font-med'>Launch App</button>
+            <button className='font-medium hidden md:block bg-[#D97706] text-white shadow-lg rounded-lg h-auto w-auto text-[0.9rem] p-3 transition font-med'>Launch App</button>
           )}
           <button className="flex items-center justify-center text-white text-3xl focus:outline-none" onClick={() => setSidebarOpen(true)}>
             <Icon icon="mdi:menu" />
@@ -163,7 +163,7 @@ const Navbar = () => {
       {/* Sidebar */}
       <div className={`fixed top-0 right-0 h-full w-[80vw] max-w-xs bg-[#181A20] z-50 shadow-2xl transform transition-transform duration-300 ${sidebarOpen ? 'translate-x-0' : 'translate-x-full'}`}>
         <div className="flex items-center justify-between px-6 py-4 border-b border-white/10">
-          <Image className='rounded-lg' src='/assests/images/Logo.svg' height={27} width={168} alt='Cottachain Logo' />
+          <Image className='rounded-lg' src='/assests/images/nav.svg' height={27} width={168} alt='Cottachain Logo' />
           <button className="text-white text-2xl" onClick={() => setSidebarOpen(false)}><Icon icon="mdi:close" /></button>
         </div>
         <div className="flex flex-col gap-6 px-6 py-8 text-white">
@@ -223,7 +223,7 @@ const Navbar = () => {
                 </Link>
               </div>
               <button
-                className='font-medium bg-white/20 text-white shadow-lg rounded-lg h-auto w-auto text-[0.9rem] p-3 transition font-med mt-4'
+                className='font-medium bg-[#D97706] text-white shadow-lg rounded-lg h-auto w-auto text-[0.9rem] p-3 transition font-med mt-4'
                 onClick={handleFeatureToast}
               >
                 Launch App

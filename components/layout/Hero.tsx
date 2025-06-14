@@ -1,9 +1,7 @@
 'use client'
-import React from 'react';
-import Image from 'next/image'
-import { motion, useAnimation } from 'framer-motion';
-import { useEffect, useRef } from 'react';
-import About from '@/components/sections/About';
+import React, { useEffect, useRef } from 'react';
+import Image from 'next/image';
+import { motion, useAnimation, useScroll, useTransform } from 'framer-motion';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -27,11 +25,18 @@ const useScrollFade = () => {
         observer.observe(element);
         return () => observer.unobserve(element);
     }, [controls]);
+
     return { ref, controls };
 };
 
 const Hero = () => {
     const fade = useScrollFade();
+    const bgRef = useRef<HTMLDivElement>(null);
+
+    const { scrollY } = useScroll();
+    const scale = useTransform(scrollY, [0, 300], [1.2, 3.5]);
+    const opacity = useTransform(scrollY, [0, 300], [1, 0]); // fades out on scroll
+
     const handleFeatureToast = () => {
         toast.info('Feature is being implemented', {
             position: 'top-center',
@@ -44,50 +49,55 @@ const Hero = () => {
             theme: 'dark',
         });
     };
-    return (
 
+    return (
         <motion.div
             ref={fade.ref}
             animate={fade.controls}
             initial={{ opacity: 0, y: 40 }}
-            style={{ backgroundImage: 'url(/assests/images/cottachainbg.svg)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}
-            className='relative pt-10 md:pt-[90px] flex-col flex items-center justify-center '>
-            <div className='flex-col flex md:flex-row relative justify-center items-center md:pl-14 mt-14 gap-14 p-5'>
+            className="relative w-full mt-[70px] md:mt-[200px] flex flex-col items-center justify-center overflow-hidden"
+        >
+            {/* Background Image with Scale and Fade Out */}
+            <motion.div
+                ref={bgRef}
+                style={{
+                    scale,
+                    opacity,
+                    backgroundImage: 'url(/assests/images/gold-bg.svg)',
+                    backgroundSize: 'contain',
+                    backgroundPosition: 'center',
+                    backgroundRepeat: 'no-repeat',
+                }}
+                className="absolute top-0 left-0 w-full h-full z-0"
+            />
 
-                {/* Net pattern overlay */}
-                {/* <div className="pointer-events-none absolute inset-0 z-0 bg-[linear-gradient(#d1d5db_1px,transparent_1px),linear-gradient(to_right,#d1d5db_1px,#fff_1px)] bg-[size:20px_20px] opacity-10" /> */}
-                <div>
-                    <div className="flex justify-start items-start flex-col relative z-10">
-                        <p className='text-[2rem] md:text-[3.5rem] mt-20 font-bold leading-tight text-white text-left leading-loose'>
-                            Solana’s Ultimate Trust Layer</p>
-                        <p className='text-gray-300 max-w-[85%] text-md md:text-lg text-left mt-7'>
-                            Solana’s Ultimate Trust Layer.
-                            Combat Web3’s $1.5B Scam Crisis with Decentralized Reputation Scores.</p>
-                    </div>
-
-                    <div className='mt-7 flex gap-5 relative z-10 mb-10'>
-                        <button
-                            className='md:bg-[#5A5892] text-[1rem] shadow-lg text-white h-auto w-auto py-4 md:w-[290px] w-auto px-10 rounded-[40px] md:rounded-[10px] transition-transform duration-200 hover:scale-105 hover:bg-yellow-700 md:border-none border border-white text-[0.8rem] flex gap-4 items-center'
-                            onClick={handleFeatureToast}
-                        >
-                            <Image src="/solana.png" alt='solana logo' height={30} width={30} className='rounded-full' />
-                            Login with Solana
-                        </button>
-                        {/* <button id="about-section" className='text-[#452B1F] text-sm shadow-lg bg-yellow-500 h-auto text-[1.1rem] w-auto py-4 px-10 rounded-[40px] transition-transform duration-200 hover:scale-105 hover:bg-yellow-400'>Explore whitepaper</button> */}
-                    </div>
+            {/* Content */}
+            <div className="mt-24 relative z-10">
+                <div className="flex justify-center items-center flex-col">
+                    <p className='text-[4rem] md:text-[5.5rem] font-extrabold leading-tight text-white text-center'>
+                        Solana Ultimate <br /> Trust Layer
+                    </p>
+                    <p className='text-white max-w-[80%] md:max-w-[100%] text-md md:text-lg text-center mt-[70px] shadow-4xl'>
+                        Combat Web3 $1.5B Scam Crisis with Decentralized Reputation Scores
+                    </p>
                 </div>
 
-                <Image src='/Hero1.svg' alt='chainimage' className='mt-10 transition-transform duration-200 hover:scale-105 w-full h-auto md:h-[80%] md:w-[60%]' height={1000} width={1000} />
-
+                <div className='mt-[70px] flex gap-5 justify-center items-center mb-10'>
+                    <button
+                        className='bg-black shadow-lg text-white h-auto py-4 px-10 rounded-[40px] border border-[#F28C28] md:rounded-[10px] transition-transform duration-200 hover:scale-105 hover:bg-yellow-700 text-[1.1rem] flex gap-4 items-center'
+                        onClick={handleFeatureToast}
+                    >
+                        <Image src="/solana.png" alt='solana logo' height={30} width={30} className='rounded-full' />
+                        Login with Solana
+                    </button>
+                </div>
             </div>
-            <About />
+
+            {/* You can uncomment About section if needed */}
+            {/* <About /> */}
             <ToastContainer />
-
-
         </motion.div>
-
-
-    )
-}
+    );
+};
 
 export default Hero;

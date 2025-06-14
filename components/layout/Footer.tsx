@@ -20,7 +20,19 @@ export default function Footer() {
   };
 
   return (
-    <footer className="text-white h-auto pt-12 p-4 w-[90%] relative overflow-hidden">
+    <footer className="text-white h-auto pt-12 p-4 w-[100%] relative overflow-hidden">
+      <div className='md:h-[300px] h-auto p-14 w-[100%] mb-[60px] mt-[120px] bg-gradient-to-br from-[#D97706] via-[#B66506] to-[#372604] flex justify-center items-center'>
+
+        <div className='flex flex-col flex-start'>
+          <p className='text-white font-bold text-[2rem]'>Your Trusted Shield in Web3</p>
+          <p className='text-gray-300 w-[65%]'>COTTACHAIN is a decentralized reputation instrastructure for the future of the internet.
+            Trustless. Tamper-Proof. Yours to own. </p>
+            <button className='h-[50px] w-[150px] bg-gradient-to-br from-[#D97706] to-[#DC2626] rounded-lg mt-7'>Enter Cottachain</button>
+        </div>
+        <Image src="/Group.svg" alt="cottachain" className="transition-transform duration-800 hover:scale-105 h-[120px] w-[120px] md:h-[150px] md:w-[150px]" height={1000} width={1000} />
+
+
+      </div>
       {/* Background animation (optional, subtle) */}
       <div className="absolute inset-0 pointer-events-none opacity-30">
         {/* Example: animated gradient or SVG nodes could go here */}
@@ -29,7 +41,7 @@ export default function Footer() {
         {/* Left: Logo & Description */}
         <div className="flex-1 min-w-[220px] flex flex-col gap-4">
           <div className="flex items-center hidden md:block gap-3">
-            <Image className='rounded-lg' src='/assests/images/Logo.svg' height={140} width={170} alt='Cottachain Logo' />
+            <Image className='rounded-lg' src='/assests/images/nav.svg' height={140} width={170} alt='Cottachain Logo' />
           </div>
           <p className="text-white/80 text-sm max-w-xs ">
             COTTACHAIN is the decentralized reputation infrastructure for the future of the internet. Trustless. Tamper-proof. Yours to own.
