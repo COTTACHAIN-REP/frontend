@@ -10,6 +10,7 @@ import Link from 'next/link';
 const socials = [
   { name: 'X', url: 'https://x.com/COTTACHAIN' },
   { name: 'Discord', url: 'https://discord.com/KCygwKz4vV' },
+  { name: 'Telegram', url: 'https://discord.com/KCygwKz4vV' },
 ];
 // const contact = [
 //   { name: 'Email', value: 'info@cottachain.com' },
@@ -51,7 +52,7 @@ const Navbar = () => {
 
   return (
     <div>
-      <div className={`${isDocRoute ? 'bg-[#302E76]' : 'bg-white/10'} mb-[30%] text-[0.8rem] z-20 border-none shadow-lg w-full p-2 flex items-center md:justify-between justify-between fixed backdrop-blur-md border border-white/30 h-[100px] md:px-14`}>
+      <div className={`${isDocRoute ? 'bg-black' : 'bg-white/10'} mb-[30%] text-[0.8rem] z-20 border-none shadow-lg w-full p-2 flex items-center md:justify-between justify-between fixed backdrop-blur-md border border-white/30 h-[100px] md:px-14`}>
         {/* Logo */}
         <div className="flex-shrink-0">
           <Image className='rounded-lg transition-transform duration-200 hover:scale-110' src='/assests/images/nav.svg' height={27} width={168} alt='Cottachain Logo' />
@@ -130,7 +131,7 @@ const Navbar = () => {
         ) : (
           <div className="hidden md:flex flex-shrink-0">
             <button
-              className='font-medium bg-black border border-[#F28C28] text-white shadow-lg rounded-lg h-auto w-auto text-[0.9rem] p-3 transition font-med ml-4'
+              className='font-medium bg-[#F28C28] text-white shadow-lg rounded-lg h-auto w-auto text-[0.9rem] p-3 transition font-med ml-4'
               onClick={handleFeatureToast}
             >
               Launch App

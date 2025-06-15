@@ -2,25 +2,15 @@
 import React from 'react';
 import Image from 'next/image';
 import { FaTwitter, FaTelegramPlane, FaDiscord } from 'react-icons/fa';
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 export default function Footer() {
-  const handleFeatureToast = () => {
-    toast.info('Feature is being implemented', {
-      position: 'top-center',
-      autoClose: 2500,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-      theme: 'dark',
-    });
-  };
+
+
 
   return (
-    <footer className="text-white h-auto pt-12 p-4 w-[100%] relative overflow-hidden">
+    <footer className="text-white bg-black h-auto pt-12 p-4 w-[98vw] relative overflow-hidden">
       <div className='md:h-[300px] h-auto p-14 w-[100%] mb-[60px] mt-[120px] bg-gradient-to-br from-[#D97706] via-[#B66506] to-[#372604] flex justify-center items-center'>
 
         <div className='flex flex-col flex-start'>
@@ -47,13 +37,13 @@ export default function Footer() {
             COTTACHAIN is the decentralized reputation infrastructure for the future of the internet. Trustless. Tamper-proof. Yours to own.
           </p>
 
-          <button className='rounded-[10px] w-[200px] text-white border-none p-3 bg-gray-700' onClick={handleFeatureToast}>Launch App</button>
+       
         </div>
         {/* Right: Navigation Columns */}
         <div className="flex-1 grid grid-cols-2 md:grid-cols-3 gap-8 md:gap-20">
           {/* Explore */}
           <div>
-            <h4 className="font-semibold mb-2 gap-y-7">Explore</h4>
+            <h4 className="font-semibold mb-2 gap-y-7 text-[#D97706] mb-4">Explore</h4>
             <ul className="space-y-1 text-white/80 text-sm">
               <li><a href="#about" className="hover:text-blue-300">Docs</a></li>
               <li><a href="#technology" className="hover:text-blue-300">Integration Partner</a></li>
@@ -64,7 +54,7 @@ export default function Footer() {
           </div>
           {/* Community */}
           <div>
-            <h4 className="font-semibold mb-2">Community</h4>
+            <h4 className="font-semibold mb-2 text-[#D97706] mb-4">Community</h4>
             <ul className="space-y-1 text-white/80 text-sm">
               <li><a href="https://twitter.com/" target="_blank" rel="noopener" className="flex items-center gap-2 hover:text-blue-300"><FaTwitter /> Twitter</a></li>
               <li><a href="https://t.me/" target="_blank" rel="noopener" className="flex items-center gap-2 hover:text-blue-300"><FaTelegramPlane /> Telegram</a></li>
@@ -73,7 +63,7 @@ export default function Footer() {
           </div>
           {/* Legal */}
           <div>
-            <h4 className="font-semibold mb-2">Legal</h4>
+            <h4 className="font-semibold mb-2 text-[#D97706] mb-4">Legal</h4>
             <ul className="space-y-1 text-white/80 text-sm">
               <li><a href="#disclaimer" className="hover:text-blue-300">Disclaimer</a></li>
               <li><a href="#privacy" className="hover:text-blue-300">Privacy Policy</a></li>

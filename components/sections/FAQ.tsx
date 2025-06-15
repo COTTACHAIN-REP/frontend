@@ -3,44 +3,44 @@ import React from 'react'
 
 const faqs = [
   {
-    question: 'What is CreatorPass?',
+    question: 'WHAT IS COTTACHAIN??',
     answer:
-      'CreatorPass is a decentralized platform on Solana that allows creators to monetize their content through NFT-based passes.',
+      'COTTACHAIN is a decentralized, portable, and verifiable reputation system built on Solana. It lets you own and control your trust score across DeFi, DAOs, e-commerce, and social media.CreatorPass is a decentralized platform on Solana that allows creators to monetize their content through NFT-based passes.',
   },
   {
-    question: 'How do I buy a pass?',
+    question: 'HOW DOES COTTACHAIN PROTECT MY PRIVACY??',
     answer:
-      'You can buy a pass by connecting your Solana wallet and minting an NFT directly from a creator’s page.',
+      'We use decentralized identity (DID) standards and zero-knowledge proofs, so you can verify your actions without revealing personal details. You control what data is shared.',
   },
   {
-    question: 'Are the passes tradable?',
+    question: 'HOW DO I USE COTTACHAIN TUST SCORE?',
     answer:
-      'No, passes are non-tradable NFTs tied to your wallet and cannot be transferred or sold.',
+      'You can use your trust score to verify yourself on marketplaces, freelance platforms, DAOs, and more—building credibility wherever you go online.',
   },
   {
-    question: 'Can I earn rewards?',
+    question: 'WHAT IS COTTACHAIN TOKEN USED FOR?',
     answer:
-      'Yes, you earn CRTP points by liking posts and minting passes. These will convert to tokens after our token launch.',
+      'COTTA is used for staking, governance, and paying for credential and reputation verification within the COTTACHAIN ecosystem.',
   },
   {
-    question: 'Do passes expire?',
+    question: 'WHAT IS DECENTRALIZED REPUTATION?',
     answer:
-      'No, passes are currently permanent once minted. You can access the creator’s gated content as long as you hold the pass.',
+      'It means your trust score is not locked to one platform. With COTTACHAIN, your reputation is portable, secure, and tamper-proof owned by you, not by corporations.',
   },
   {
-    question: 'What wallet can I use?',
+    question: 'HOW CAN I JOIN THE COMMUNITY?',
     answer:
-      'Any wallet that supports the Solana blockchain, such as Phantom or Solflare, is compatible with CreatorPass.',
+      'Join us on Discord, Telegram, or Twitter to connect with builders, creators, and Web3 enthusiasts. Everyone is welcome!',
   },
   {
-    question: 'Can I use multiple passes?',
+    question: 'IS MY DATA SAFE ON COTTACHAIN?',
     answer:
-      'Yes, you can hold multiple passes from different creators at once. Each one unlocks unique content.',
+      'Yes.  Uses cryptographic proofs and anti-fraud architecture to keep your data secure and tamper-proof.',
   },
   {
-    question: 'Is it free to join?',
+    question: 'HOW DO I GET STARTED?',
     answer:
-      'Yes, the platform is free to join. You only pay when minting a pass for a specific creator.',
+      'Click “Get Started” on our site or join the movement on Discord or Telegram to begin your journey with COTTACHAIN.',
   },
 ]
 
