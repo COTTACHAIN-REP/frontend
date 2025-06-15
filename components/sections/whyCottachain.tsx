@@ -58,14 +58,14 @@ const WhyCottachain = () => {
             </div>
             <div id="how-cottachain"></div>
 
-            <div className="text-white my-20 md:my-7 md:mt-[180px] text-[1.7rem] md:text-[2.5rem] max-w-[90%] md:max-w-[70%] font-bold text-center"> How Cottachain Delivers Trust Through Reputation Score</div>
+            <div className="text-[#D97706] my-20 md:my-7 md:mt-[180px] text-[1.7rem] md:text-[2.5rem] max-w-[90%] md:max-w-[70%] font-bold text-center"> How Cottachain Delivers Trust <br /> <span className="text-white">Through Reputation Score</span></div>
 
             <div className="relative mt-10 md:mt-[150px] w-full flex justify-center items-center">
                 <div className="grid bg-gradient-to-br bg-blur from-orange-900 to-[#062015]
  grid-cols-1 md:grid-cols-3 h-auto gap-y-14 md:gap-5 p-10 md:gap-y-14 w-[90%]">
                     {trustFeatures.map((item, idx) => (
 
-                        <div key={idx} className="md:h-[400px] h-auto p-5 bg-[#1A1817] rounded-[10px] p-2 w-full  flex justify-center items-center flex-col">
+                        <div key={idx} className="md:h-[400px] h-auto p-5 bg-[#1A1817] rounded-[10px] p-2 w-full flex justify-center items-center flex-col">
 
                             <Image
                                 src={item.img}
@@ -137,23 +137,26 @@ const WhyCottachain = () => {
 
             <div className="relative mt-10 md:mt-[50px] flex flex-col md:flex-row gap-8 justify-center items-center">
                 <div className="bg-gradient-to-r relative h-[320px] w-full max-w-[95vw] md:max-w-[500px] md:h-[290px] md:w-[500px] from-orange-500 to-blue-200 p-[1px] rounded-[10px] mx-auto">
-                    <div className="h-full rounded-[10px] p-2 bg-gradient-to-b from-gray-900 to-gray-800 flex justify-center items-start flex-col p-5 md:p-7">
+                    <div className="h-full rounded-[10px] p-2 bg-gradient-to-b from-[#0E0C0B] to-[#2A2928] flex justify-center items-start flex-col p-5 md:p-7">
                         <p className="font-medium text-[1.1rem] md:text-[1.4rem] mb-4 text-white">For contributors</p>
                         <p className="text-white font-thin mb-5">Become part of the decentralized reputation system</p>
                         <p className="text-white">Submit data request</p>
                         <p className="text-white">Join as data provider</p>
-                        <button className="bg-[#0052ff] text-white text-sm p-3 rounded-[10px] border-none mt-5">Explore models and dataset</button>
+                        <div className="flex flex-col md:flex-row gap-4">
+                            <button className="bg-[#B68524] text-white text-sm p-3 rounded-[10px] border-none mt-5">Explore models and dataset</button>
+                            <button className="bg-transparent border border-[2px] border-[#B68524] text-white text-sm p-3 rounded-[10px] mt-5">Coming soon</button>
+                        </div>
                     </div>
                 </div>
                 <div className="bg-gradient-to-r relative h-[320px] w-full max-w-[95vw] md:max-w-[500px] md:h-[290px] md:w-[500px] from-orange-500 to-blue-200 p-[1px] rounded-[10px] mx-auto">
-                    <div className="h-full rounded-[10px] p-2 bg-gradient-to-b from-gray-900 to-gray-800 flex justify-center items-start flex-col p-5 md:p-7">
+                    <div className="h-full rounded-[10px] p-2 bg-gradient-to-b from-[#0E0C0B] to-[#2A2928] flex justify-center items-start flex-col p-5 md:p-7">
                         <p className="font-medium text-[1.1rem] md:text-[1.4rem] mb-4 text-white">For Developers</p>
                         <p className="text-white font-thin mb-5">Become part of the decentralized reputation system</p>
                         <p className="text-white">Check the available data sources</p>
                         <p className="text-white">Build your own reputation system</p>
                         <div className="flex flex-col md:flex-row gap-4">
                             <button className="bg-[#B68524] text-white text-sm p-3 rounded-[10px] border-none mt-5">View documentation</button>
-                            <button className="bg-transparent border border-[2px] border-[#B68524] text-white text-sm p-3 rounded-[10px] mt-5">Contact us</button>
+                            <button className="bg-transparent border border-[2px] border-[#B68524] text-white text-sm p-3 rounded-[10px] mt-5">Coming soon</button>
                         </div>
                     </div>
                 </div>
@@ -189,7 +192,7 @@ const WhyCottachain = () => {
                     <p className="font-medium text-[1.1rem] md:text-[1.5rem] mb-4 text-white">Join 10K+ users on Cottachain Protocol</p>
                     <p className="text-white font-thin text-[1rem] md:text-[1.1rem] w-full md:w-[65%] mb-5">Designed to turn your good deeds online into endless rewards.</p>
                     <div className="flex flex-col md:flex-row gap-4 w-full">
-                        <button className="bg-slate-800 text-white text-sm p-3 rounded-[10px] border-none w-full md:w-auto">Get your reputation score</button>
+                        <button className="bg-transparent shadow-sm shadow-gray-800 cursor-pointer hover:bg-slate-900 text-white text-sm p-3 rounded-[10px] w-full md:w-auto">Get your reputation score</button>
                     </div>
                 </div>
             </div>

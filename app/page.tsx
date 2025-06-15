@@ -15,8 +15,9 @@ export default function Home() {
         <About />
         <HowItWorks />
         <FAQ />
-        <Footer />
+        
       </div>
+      <Footer />
 
     </div>
   );

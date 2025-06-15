@@ -63,7 +63,7 @@ const Hero = () => {
                 style={{
                     scale,
                     opacity,
-                    backgroundImage: 'url(/assests/images/gold-bg.svg)',
+                    backgroundImage: 'url(/assests/images/golds-bg.svg)',
                     backgroundSize: 'contain',
                     backgroundPosition: 'center',
                     backgroundRepeat: 'no-repeat',
@@ -84,7 +84,7 @@ const Hero = () => {
 
                 <div className='mt-[70px] flex gap-5 justify-center items-center mb-10'>
                     <button
-                        className='bg-black shadow-lg text-white h-auto py-4 px-10 rounded-[40px] border border-[#F28C28] md:rounded-[10px] transition-transform duration-200 hover:scale-105 hover:bg-yellow-700 text-[1.1rem] flex gap-4 items-center'
+                        className='bg-[#F28C28] shadow-lg text-white h-auto py-4 px-10 rounded-[40px] md:rounded-[10px] transition-transform duration-200 hover:scale-105 hover:bg-yellow-700 text-[1.1rem] flex gap-4 items-center'
                         onClick={handleFeatureToast}
                     >
                         <Image src="/solana.png" alt='solana logo' height={30} width={30} className='rounded-full' />
