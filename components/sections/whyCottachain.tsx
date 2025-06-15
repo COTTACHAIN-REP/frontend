@@ -46,37 +46,6 @@ const WhyCottachain = () => {
         },
     ];
 
-    // const steps = [
-    //     {
-    //         icon: <Icon icon="carbon:blockchain" width="65" height="65" />,
-    //         title: 'Track On-Chain Activity',
-    //         desc: 'COTTACHAIN captures your actions across dApps, protocols, and DAOs  including transactions, votes, and verifications.'
-    //     },
-    //     {
-    //         icon: <Icon icon="mdi:account-lock" width="65" height="65" />,
-    //         title: 'Verify Identity via DID',
-    //         desc: 'Your activity is securely linked to a W3C-compliant Decentralized Identity (DID) that you control.'
-    //     },
-    //     {
-    //         icon: <Icon icon="tabler:shield-lock" width="65" height="65" className="text-purple-500" />,
-    //         title: 'Validate with Cryptographic Proofs',
-    //         desc: 'Zero-knowledge proofs and digital signatures verify your actions without revealing private information.'
-    //     },
-    //     {
-    //         icon: <Icon icon="material-symbols:function" width="65" height="65" className="text-red-600" />,
-    //         title: 'Score via Smart Algorithms',
-    //         desc: 'Reputation is calculated through smart contracts using customizable scoring logic based on context and ecosystem.'
-    //     },
-    //     {
-    //         icon: <Icon icon="mdi:chart-line" width="65" height="65" className="text-green-600" />,
-    //         title: 'Update & Store Score On-Chain',
-    //         desc: 'Your final score is stored securely on-chain portable, tamper-proof, and usable across apps and platforms.'
-    //     },
-    // ];
-
-    // const [current, setCurrent] = useState(0);
-    // const nextStep = () => setCurrent((prev) => (prev + 1) % steps.length);
-    // const prevStep = () => setCurrent((prev) => (prev - 1 + steps.length) % steps.length);
 
     return (
         <div className="flex flex-col items-center p-2 md:p-3 justify-center mt-10 md:mt-20 w-full">
