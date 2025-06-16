@@ -175,7 +175,7 @@ const WhyCottachain = () => {
                 <div className="flex gap-8 md:gap-20 mt-5 w-full justify-center items-center">
                     <div className="flex gap-3 flex-col justify-center items-center mt-5">
                         <Image src="/p2b.png" alt="data sources" className="transition-transform duration-200 hover:scale-105 h-[75px] rounded-full w-[75px]" height={1000} width={1000} />
-                        <p className="text-gray-100 text-[0.9rem] mt-2 font-medium">People To Business Exchange</p>
+                        <p className="text-gray-100 text-[1.1rem] mt-2 font-bold">People To Business Exchange</p>
                     </div>
                    
                
