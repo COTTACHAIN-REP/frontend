@@ -174,7 +174,7 @@ const WhyCottachain = () => {
                 <p className="text-white text-[1.1rem] md:text-[1.3rem] mt-4">Trusted By</p>
                 <div className="flex gap-8 md:gap-20 mt-5 w-full justify-center items-center">
                     <div className="flex gap-3 flex-col justify-center items-center mt-5">
-                        <Image src="/jupiter.svg" alt="data sources" className="transition-transform duration-200 hover:scale-105 h-[70px] w-[70px]" height={1000} width={1000} />
+                        <Image src="/jupiter.png" alt="data sources" className="transition-transform duration-200 hover:scale-105 h-[70px] w-[70px]" height={1000} width={1000} />
                         <p className="text-gray-100 text-[0.9rem] mt-2 font-medium">Jupiter</p>
                     </div>
                     <div className="flex gap-3 flex-col justify-center items-center mt-5">
@@ -182,11 +182,11 @@ const WhyCottachain = () => {
                         <p className="text-gray-100 text-[0.9rem] mt-2 font-medium">Orca</p>
                     </div>
                     <div className="flex gap-3 flex-col justify-center items-center mt-5">
-                        <Image src="/ray.svg" alt="data sources" className="transition-transform duration-200 hover:scale-105 h-[70px] w-[70px]" height={1000} width={1000} />
-                        <p className="text-gray-100 text-[0.9rem] mt-2 font-medium">Ray</p>
+                        <Image src="/radium.jpg" alt="data sources" className="transition-transform duration-200 hover:scale-105 h-[75px] w-[75px] rounded-full" height={1000} width={1000} />
+                        <p className="text-gray-100 text-[0.9rem] mt-2 font-medium">Radium</p>
                     </div>
                     <div className="flex gap-3 flex-col justify-center items-center mt-5">
-                        <Image src="/meteor.svg" alt="data sources" className="transition-transform duration-200 hover:scale-105 h-[70px] w-[70px]" height={1000} width={1000} />
+                        <Image src="/meteor.jpg" alt="data sources" className="transition-transform duration-200 hover:scale-105 h-[75px] w-[75px] rounded-full" height={1000} width={1000} />
                         <p className="text-gray-100 text-[0.9rem] mt-2 font-medium">Meteor</p>
                     </div>
                 </div>
