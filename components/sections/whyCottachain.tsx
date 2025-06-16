@@ -171,7 +171,7 @@ const WhyCottachain = () => {
 
                 <p className="text-white text-[1.1rem] md:text-[1.3rem] mt-20">Connect with solana networks:</p>
                 <Image src="/Group.svg" alt="cottachain" className="mt-10 animate-bounce transition-transform mt-[150px] duration-800 hover:scale-105 h-[150px] w-[150px] md:h-[350px] md:w-[350px]" height={1000} width={1000} />
-                <p className="text-white text-[1.1rem] md:text-[1.3rem] mt-4">Trusted By</p>
+                <p className="text-white text-[1.4rem] md:text-[1.5rem] mt-4">Trusted By</p>
                 <div className="flex gap-8 md:gap-20 mt-5 w-full justify-center items-center">
                     <div className="flex gap-3 flex-col justify-center items-center mt-5">
                         <Image src="/p2b.png" alt="data sources" className="transition-transform duration-200 hover:scale-105 h-[75px] rounded-full w-[75px]" height={1000} width={1000} />
