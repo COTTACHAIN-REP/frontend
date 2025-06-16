@@ -174,27 +174,17 @@ const WhyCottachain = () => {
                 <p className="text-white text-[1.1rem] md:text-[1.3rem] mt-4">Trusted By</p>
                 <div className="flex gap-8 md:gap-20 mt-5 w-full justify-center items-center">
                     <div className="flex gap-3 flex-col justify-center items-center mt-5">
-                        <Image src="/jupiter.png" alt="data sources" className="transition-transform duration-200 hover:scale-105 h-[70px] w-[70px]" height={1000} width={1000} />
-                        <p className="text-gray-100 text-[0.9rem] mt-2 font-medium">Jupiter</p>
+                        <Image src="/p2b.png" alt="data sources" className="transition-transform duration-200 hover:scale-105 h-[75px] rounded-full w-[75px]" height={1000} width={1000} />
+                        <p className="text-gray-100 text-[0.9rem] mt-2 font-medium">People To Business Exchange</p>
                     </div>
-                    <div className="flex gap-3 flex-col justify-center items-center mt-5">
-                        <Image src="/orca.svg" alt="data sources" className="transition-transform duration-200 hover:scale-105 h-[70px] w-[70px]" height={1000} width={1000} />
-                        <p className="text-gray-100 text-[0.9rem] mt-2 font-medium">Orca</p>
-                    </div>
-                    <div className="flex gap-3 flex-col justify-center items-center mt-5">
-                        <Image src="/radium.jpg" alt="data sources" className="transition-transform duration-200 hover:scale-105 h-[75px] w-[75px] rounded-full" height={1000} width={1000} />
-                        <p className="text-gray-100 text-[0.9rem] mt-2 font-medium">Radium</p>
-                    </div>
-                    <div className="flex gap-3 flex-col justify-center items-center mt-5">
-                        <Image src="/meteor.jpg" alt="data sources" className="transition-transform duration-200 hover:scale-105 h-[75px] w-[75px] rounded-full" height={1000} width={1000} />
-                        <p className="text-gray-100 text-[0.9rem] mt-2 font-medium">Meteor</p>
-                    </div>
+                   
+               
                 </div>
             </div>
 
             <div className="relative w-full my-[50px] max-w-[95vw] md:max-w-[800px] md:mt-20 p-[1px] rounded-[10px] mx-auto">
                 <div className="h-full rounded-[15px] p-2 bg-gradient-to-br from-[#8A7037] to-[#D97706] flex flex-col justify-center items-start p-5 md:p-7">
-                    <p className="font-medium text-[1.1rem] md:text-[1.5rem] mb-4 text-white">Join 10K+ users on Cottachain Protocol</p>
+                    <p className="font-medium text-[1.1rem] md:text-[1.5rem] mb-4 text-white">Join 200K+ users on Cottachain Protocol</p>
                     <p className="text-white font-thin text-[1rem] md:text-[1.1rem] w-full md:w-[65%] mb-5">Designed to turn your good deeds online into endless rewards.</p>
                     <div className="flex flex-col md:flex-row gap-4 w-full">
                         <button className="bg-transparent shadow-sm shadow-gray-800 cursor-pointer hover:bg-slate-900 text-white text-sm p-3 rounded-[10px] w-full md:w-auto">Get your reputation score</button>
