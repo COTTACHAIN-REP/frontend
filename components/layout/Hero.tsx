@@ -77,14 +77,14 @@ const Hero = () => {
                     <p className='text-[4rem] md:text-[5.5rem] font-extrabold leading-tight text-white text-center'>
                         Solana Ultimate <br /> Trust Layer
                     </p>
-                    <p className='text-white max-w-[80%] md:max-w-[100%] text-md md:text-lg text-center mt-[70px] shadow-4xl'>
-                        Stop $1.5B in Web3 Scams with COTTA Scores <br />Join 200+ Pioneers to Secure DeFi, NFTs, DAOs, and Gamers!
+                    <p className='text-white max-w-[80%] md:max-w-[100%] text-md md:text-[1.4rem] text-center mt-[70px] shadow-4xl'>
+                        Stop $1.5B in Web3 Scams with COTTA Scores <br />Join 200k+ Pioneers to Secure DeFi, NFTs, DAOs, and Gamers!
                     </p>
                 </div>
 
                 <div className='mt-[70px] flex gap-5 justify-center items-center mb-10'>
                     <button
-                        className='bg-[#F28C28] shadow-lg text-white h-auto py-4 px-10 rounded-[40px] md:rounded-[10px] transition-transform duration-200 hover:scale-105 hover:bg-yellow-700 text-[1.1rem] flex gap-4 items-center'
+                        className='bg-[#F28C28] shadow-lg text-white h-auto py-4 px-10 rounded-[40px] md:rounded-[10px] transition-transform duration-200 hover:scale-105 hover:bg-yellow-700 text-1rem md:text-[1.1rem] flex gap-4 items-center'
                         onClick={handleFeatureToast}
                     >
                         <Image src="/solana.png" alt='solana logo' height={30} width={30} className='rounded-full' />
