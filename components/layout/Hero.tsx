@@ -34,7 +34,7 @@ const Hero = () => {
     const bgRef = useRef<HTMLDivElement>(null);
 
     const { scrollY } = useScroll();
-    const scale = useTransform(scrollY, [0, 300], [1.2, 3.5]);
+    const y = useTransform(scrollY, [0, 300], [0, -100]);
     const opacity = useTransform(scrollY, [0, 300], [1, 0]); // fades out on scroll
 
     const handleFeatureToast = () => {
@@ -57,11 +57,11 @@ const Hero = () => {
             initial={{ opacity: 0, y: 40 }}
             className="relative w-full mt-[70px] md:mt-[200px] flex flex-col items-center justify-center overflow-hidden"
         >
-            {/* Background Image with Scale and Fade Out */}
+            {/* Background Image with Parallax Y Movement and Fade Out */}
             <motion.div
                 ref={bgRef}
                 style={{
-                    scale,
+                    y,
                     opacity,
                     backgroundImage: 'url(/assests/images/golds-bg.svg)',
                     backgroundSize: 'contain',
@@ -78,7 +78,7 @@ const Hero = () => {
                         Solana Ultimate <br /> Trust Layer
                     </p>
                     <p className='text-white max-w-[80%] md:max-w-[100%] text-md md:text-lg text-center mt-[70px] shadow-4xl'>
-                        Combat Web3 $1.5B Scam Crisis with Decentralized Reputation Scores
+                        Stop $1.5B in Web3 Scams with COTTA Scores <br />Join 200+ Pioneers to Secure DeFi, NFTs, DAOs, and Gamers!
                     </p>
                 </div>
 

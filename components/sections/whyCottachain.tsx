@@ -101,11 +101,14 @@ const WhyCottachain = () => {
                         </div>
 
                         <div className="flex flex-col justify-center items-center">
+                            COTTA Score: Your Web3 Trust Compass
 
-                            <p className="text-[#A8A29E] mt-4 text-center md:text-left">Overall Security Assessment</p>
-                            <p className="text-[#A8A29E] mt-4 text-center md:text-left">Offering comprehensive security ratings and scores for web3 projects.</p>
-                            <p className="text-[#A8A29E] mt-4 text-center md:text-left">Integrating multiple proprietary engines to increase Builders peace of mind</p>
-                            <p className="text-[#A8A29E] mt-4 text-center md:text-left">Real-time risk alerts to protect investor assets and maintain confidence.</p>
+                            <p className="text-[#A8A29E] mt-4 text-left">Overall Security Assessment</p>
+                            <p className="text-[#A8A29E] mt-4 text-left">Check wallet trustworthiness with real-time, Solana-powered
+                                reputation scores (0–1000).</p>
+                            <p className="text-[#A8A29E] mt-4 text-left"> Built with zk-SNARKs and SAS,
+                                COTTA Scores stop scams like Pump.fun’s $1.9M exploit.</p>
+                            <p className="text-[#A8A29E] mt-4 text-left">Real-time risk alerts to protect investor assets and maintain confidence. Traders, DAOs, and dApps trust us</p>
                         </div>
 
                     </div>
@@ -133,7 +136,9 @@ const WhyCottachain = () => {
 
             <div className="text-white p-4 mt-[150px] text-[2rem] md:text-[2.5rem] max-w-full md:max-w-[70%] font-bold text-center"> Our Infrastrcuture for Reputation System</div>
 
-            <p className="text-center leading-loose mt-10 mb-10 text-gray-200 text-[0.95rem] md:text-[1rem] p-4 w-full md:max-w-[70%]">Cottachain Protocols library of providers offer a wide range of on-chain and off-chain data across diverse blockchains, DeFi platforms, NFTs, DAOs, and more. This wealth of data includes social media verification and smart-contract interactions, available at the most recent or historical block height. </p>
+            <p className="text-center leading-loose mt-10 mb-10 text-gray-200 text-[0.95rem] md:text-[1rem] p-4 w-full md:max-w-[70%]">Blockchain Foundation: Built on Solana’s high-throughput blockchain (65,000
+                TPS) using Rust smart contracts for scoring, storage, and verification. Offchain indexing (e.g., The Graph) optimizes data retrieval while keeping
+                records tamper-proof. </p>
 
             <div className="relative mt-10 md:mt-[50px] flex flex-col md:flex-row gap-8 justify-center items-center">
                 <div className="bg-gradient-to-r relative h-[320px] w-full max-w-[95vw] md:max-w-[500px] md:h-[290px] md:w-[500px] from-orange-500 to-blue-200 p-[1px] rounded-[10px] mx-auto">
@@ -169,7 +174,7 @@ const WhyCottachain = () => {
                 <p className="text-white text-[1.1rem] md:text-[1.3rem] mt-4">Trusted By</p>
                 <div className="flex gap-8 md:gap-20 mt-5 w-full justify-center items-center">
                     <div className="flex gap-3 flex-col justify-center items-center mt-5">
-                        <Image src="/jupiter.svg" alt="data sources" className="transition-transform duration-200 hover:scale-105 h-[70px] w-[70px]" height={1000} width={1000} />
+                        <Image src="/jupiter.png" alt="data sources" className="transition-transform duration-200 hover:scale-105 h-[70px] w-[70px]" height={1000} width={1000} />
                         <p className="text-gray-100 text-[0.9rem] mt-2 font-medium">Jupiter</p>
                     </div>
                     <div className="flex gap-3 flex-col justify-center items-center mt-5">
@@ -177,11 +182,11 @@ const WhyCottachain = () => {
                         <p className="text-gray-100 text-[0.9rem] mt-2 font-medium">Orca</p>
                     </div>
                     <div className="flex gap-3 flex-col justify-center items-center mt-5">
-                        <Image src="/ray.svg" alt="data sources" className="transition-transform duration-200 hover:scale-105 h-[70px] w-[70px]" height={1000} width={1000} />
-                        <p className="text-gray-100 text-[0.9rem] mt-2 font-medium">Ray</p>
+                        <Image src="/radium.jpg" alt="data sources" className="transition-transform duration-200 hover:scale-105 h-[75px] w-[75px] rounded-full" height={1000} width={1000} />
+                        <p className="text-gray-100 text-[0.9rem] mt-2 font-medium">Radium</p>
                     </div>
                     <div className="flex gap-3 flex-col justify-center items-center mt-5">
-                        <Image src="/meteor.svg" alt="data sources" className="transition-transform duration-200 hover:scale-105 h-[70px] w-[70px]" height={1000} width={1000} />
+                        <Image src="/meteor.jpg" alt="data sources" className="transition-transform duration-200 hover:scale-105 h-[75px] w-[75px] rounded-full" height={1000} width={1000} />
                         <p className="text-gray-100 text-[0.9rem] mt-2 font-medium">Meteor</p>
                     </div>
                 </div>

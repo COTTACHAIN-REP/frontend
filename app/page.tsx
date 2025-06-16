@@ -1,5 +1,4 @@
 import Hero from '@/components/layout/Hero';
-import Footer from '@/components/layout/Footer'
 import HowItWorks from '@/components/sections/whyCottachain';
 import FAQ from '@/components/sections/FAQ';
 import About from '@/components/sections/About';
@@ -17,7 +16,7 @@ export default function Home() {
         <FAQ />
         
       </div>
-      <Footer />
+      {/* <Footer /> */}
 
     </div>
   );
