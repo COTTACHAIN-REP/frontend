@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { FaTwitter, FaTelegramPlane, FaDiscord } from 'react-icons/fa';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
+import Link from 'next/link';
 export default function Footer() {
 
 
@@ -19,7 +19,7 @@ export default function Footer() {
           <p className='text-gray-300 w-[65%]'>COTTACHAIN is Solana decentralized trust layer, fighting
             $1.5B in scams with portable reputation scores. Trustless.
             Tamper-Proof. Yours to own. Join 200+ pioneers.</p>
-          <button className='h-[50px] w-[150px] bg-gradient-to-br from-[#D97706] to-[#DC2626] rounded-lg mt-7'>Enter Cottachain</button>
+          <Link href="/waitlist">  <button className='h-[50px] w-[150px] bg-gradient-to-br from-[#D97706] to-[#DC2626] rounded-lg mt-7'>Join our waitlist</button> </Link>
         </div>
         <Image src="/Group.svg" alt="cottachain" className="transition-transform duration-800 hover:scale-105 h-[120px] w-[120px] md:h-[150px] md:w-[150px]" height={1000} width={1000} />
 
