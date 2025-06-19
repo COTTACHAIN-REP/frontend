@@ -4,9 +4,16 @@ import React from "react";
 
 // import { useState } from 'react';
 import Image from "next/image";
-
+import Link from "next/link";
 const WhyCottachain = () => {
-
+    const features = [
+        "Blockchain Foundation: Built on Solana’s high-throughput blockchain (65,000 TPS) using Rust smart contracts for scoring, storage, and verification. Offchain indexing (e.g., The Graph) optimizes data retrieval while keeping records tamper-proof.",
+        "Decentralized Identity (DID): W3C-compliant DID links scores to wallet addresses, ensuring privacy and user control with selective disclosure.",
+        "Cryptographic Proofs: zk-SNARKs enable score verification without revealing transaction data, with ECDSA signatures for integrity.",
+        "Anti-Fraud Mechanisms: Sybil resistance via $COTTA staking and 30-day activity thresholds, plus bot detection through transaction pattern analysis.",
+        "Scoring Algorithm: Weighs on-chain actions (40% transactions, 30% governance, 20% dApp interactions, 10% staking) for real-time scores (0–1000)",
+        `API: RESTful endpoints (e.g., GET /score/{"{wallet_address}"}) allow dApps to query scores, with testnet functionality by Q3 2025.`,
+    ];
     const trustFeatures = [
         {
             img: "/Group7.svg",
@@ -136,9 +143,22 @@ const WhyCottachain = () => {
 
             <div className="text-white p-4 mt-[150px] text-[2rem] md:text-[2.5rem] max-w-full md:max-w-[70%] font-bold text-center"> Our Infrastrcuture for Reputation System</div>
 
-            <p className="text-center leading-loose mt-10 mb-10 text-gray-200 text-[0.95rem] md:text-[1rem] p-4 w-full md:max-w-[70%]">Blockchain Foundation: Built on Solana’s high-throughput blockchain (65,000
-                TPS) using Rust smart contracts for scoring, storage, and verification. Offchain indexing (e.g., The Graph) optimizes data retrieval while keeping
-                records tamper-proof. </p>
+
+            <div className="bg-black min-h-screen pb-12 px-4 flex items-center justify-center">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl w-full">
+                    {features.map((feature, index) => (
+                        <div
+                            key={index}
+                            className="bg-gray-900 border border-gray-800 rounded-xl p-6 text-gray-200 shadow-lg"
+                        >
+                            <p className="text-[0.95rem] md:text-[1rem] leading-relaxed">
+                                {feature}
+                            </p>
+                        </div>
+                    ))}
+                </div>
+            </div>
+
 
             <div className="relative mt-10 md:mt-[50px] flex flex-col md:flex-row gap-8 justify-center items-center">
                 <div className="bg-gradient-to-r relative h-[320px] w-full max-w-[95vw] md:max-w-[500px] md:h-[290px] md:w-[500px] from-orange-500 to-blue-200 p-[1px] rounded-[10px] mx-auto">
@@ -170,24 +190,24 @@ const WhyCottachain = () => {
             <div className="w-full flex flex-col items-center justify-center mt-20">
 
                 <p className="text-white text-[1.1rem] md:text-[1.3rem] mt-20">Connect with solana networks:</p>
-                <Image src="/Group.svg" alt="cottachain" className="mt-10 animate-bounce transition-transform mt-[150px] duration-800 hover:scale-105 h-[150px] w-[150px] md:h-[350px] md:w-[350px]" height={1000} width={1000} />
+                <Image src="/newbg.svg" alt="cottachain" className="mt-10 animate-bounce transition-transform mt-[150px] duration-800 hover:scale-105 h-[150px] w-[150px] md:h-[350px] md:w-[350px]" height={1000} width={1000} />
                 <p className="text-white text-[1.4rem] md:text-[1.5rem] mt-4">Trusted By</p>
                 <div className="flex gap-8 md:gap-20 mt-5 w-full justify-center items-center">
                     <div className="flex gap-3 flex-col justify-center items-center mt-5">
                         <Image src="/p2b.png" alt="data sources" className="transition-transform duration-200 hover:scale-105 h-[75px] rounded-full w-[75px]" height={1000} width={1000} />
                         <p className="text-gray-100 text-[1.1rem] mt-2 font-bold">People To Business Exchange</p>
                     </div>
-                   
-               
+
+
                 </div>
             </div>
 
             <div className="relative w-full my-[50px] max-w-[95vw] md:max-w-[800px] md:mt-20 p-[1px] rounded-[10px] mx-auto">
                 <div className="h-full rounded-[15px] p-2 bg-gradient-to-br from-[#8A7037] to-[#D97706] flex flex-col justify-center items-start p-5 md:p-7">
-                    <p className="font-medium text-[1.1rem] md:text-[1.5rem] mb-4 text-white">Join 200K+ users on Cottachain Protocol</p>
+                    <p className="font-medium text-[1.1rem] md:text-[1.5rem] mb-4 text-white">Join 200+ users on Cottachain Protocol</p>
                     <p className="text-white font-thin text-[1rem] md:text-[1.1rem] w-full md:w-[65%] mb-5">Designed to turn your good deeds online into endless rewards.</p>
                     <div className="flex flex-col md:flex-row gap-4 w-full">
-                        <button className="bg-transparent shadow-sm shadow-gray-800 cursor-pointer hover:bg-slate-900 text-white text-sm p-3 rounded-[10px] w-full md:w-auto">Get your reputation score</button>
+                        <Link href="/waitlist">    <button className="bg-transparent shadow-sm shadow-gray-800 cursor-pointer hover:bg-slate-900 text-white text-sm p-3 rounded-[10px] w-full md:w-auto">Join our waitlist</button> </Link>
                     </div>
                 </div>
             </div>

@@ -2,11 +2,10 @@
 import React, { useRef, useState } from 'react';
 import Image from 'next/image';
 import { Icon } from '@iconify/react';
-import { ToastContainer, toast } from 'react-toastify';
+// import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
-
 const socials = [
   { name: 'X', url: 'https://x.com/COTTACHAIN' },
   { name: 'Discord', url: 'https://discord.com/KCygwKz4vV' },
@@ -37,25 +36,25 @@ const Navbar = () => {
     }
   };
 
-  const handleFeatureToast = () => {
-    toast.info('Feature is being implemented', {
-      position: 'top-center',
-      autoClose: 2500,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-      theme: 'dark',
-    });
-  };
+  // const handleFeatureToast = () => {
+  //   toast.info('Feature is being implemented', {
+  //     position: 'top-center',
+  //     autoClose: 2500,
+  //     hideProgressBar: false,
+  //     closeOnClick: true,
+  //     pauseOnHover: true,
+  //     draggable: true,
+  //     progress: undefined,
+  //     theme: 'dark',
+  //   });
+  // };
 
   return (
     <div>
       <div className={`${isDocRoute ? 'bg-black' : 'bg-white/10'} mb-[30%] text-[0.8rem] z-20 border-none shadow-lg w-full p-2 flex items-center md:justify-between justify-between fixed backdrop-blur-md border border-white/30 h-[100px] md:px-14`}>
         {/* Logo */}
         <div className="flex-shrink-0">
-          <Image className='rounded-lg transition-transform duration-200 hover:scale-110' src='/assests/images/nav.svg' height={27} width={168} alt='Cottachain Logo' />
+              <Link href="/"> <Image className='rounded-lg transition-transform duration-200 hover:scale-110' src='/assests/images/nav.svg' height={27} width={168} alt='Cottachain Logo' /> </Link>
         </div>
         {/* Desktop nav */}
         <div className='hidden md:flex flex-1 items-center justify-center gap-8 font-medium text-[0.9rem] text-opacity-72'>
@@ -130,12 +129,12 @@ const Navbar = () => {
           </div>
         ) : (
           <div className="hidden md:flex flex-shrink-0">
-            <button
+           <Link href="/waitlist">   <button
               className='font-medium bg-[#F28C28] text-white shadow-lg rounded-lg h-auto w-auto text-[0.9rem] p-3 transition font-med ml-4'
-              onClick={handleFeatureToast}
+              // onClick={handleFeatureToast}
             >
-              Launch App
-            </button>
+              Join our waitlist
+            </button> </Link>
           </div>
         )}
         {/* Mobile nav icon and Launch App button */}
@@ -150,7 +149,7 @@ const Navbar = () => {
               <span>Home</span>
             </button>
           ) : (
-            <button className='font-medium hidden md:block bg-[#D97706] text-white shadow-lg rounded-lg h-auto w-auto text-[0.9rem] p-3 transition font-med'>Launch App</button>
+           <Link href="/waitlist">   <button className='font-medium hidden md:block bg-[#D97706] text-white shadow-lg rounded-lg h-auto w-auto text-[0.9rem] p-3 transition font-med'>Join our waitlist</button> </Link>
           )}
           <button className="flex items-center justify-center text-white text-3xl focus:outline-none" onClick={() => setSidebarOpen(true)}>
             <Icon icon="mdi:menu" />
@@ -223,17 +222,17 @@ const Navbar = () => {
                   <p className={`cursor-pointer hover:text-yellow-400 transition${isTokenRoute ? ' text-yellow-500' : ''}`}>Token</p>
                 </Link>
               </div>
-              <button
+            <Link href="/waitlist">    <button
                 className='font-medium bg-[#D97706] text-white shadow-lg rounded-lg h-auto w-auto text-[0.9rem] p-3 transition font-med mt-4'
-                onClick={handleFeatureToast}
+                // onClick={handleFeatureToast}
               >
-                Launch App
-              </button>
+                Join our waitlist
+              </button> </Link>
             </>
           )}
         </div>
       </div>
-      <ToastContainer />
+      {/* <ToastContainer /> */}
     </div>
   );
 };

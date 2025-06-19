@@ -2,9 +2,9 @@
 import React, { useEffect, useRef } from 'react';
 import Image from 'next/image';
 import { motion, useAnimation, useScroll, useTransform } from 'framer-motion';
-import { ToastContainer, toast } from 'react-toastify';
+// import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
+import Link from 'next/link';
 const useScrollFade = () => {
     const controls = useAnimation();
     const ref = useRef<HTMLDivElement>(null);
@@ -37,18 +37,18 @@ const Hero = () => {
     const y = useTransform(scrollY, [0, 300], [0, -100]);
     const opacity = useTransform(scrollY, [0, 300], [1, 0]); // fades out on scroll
 
-    const handleFeatureToast = () => {
-        toast.info('Feature is being implemented', {
-            position: 'top-center',
-            autoClose: 2500,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            theme: 'dark',
-        });
-    };
+    // const handleFeatureToast = () => {
+    //     toast.info('Feature is being implemented', {
+    //         position: 'top-center',
+    //         autoClose: 2500,
+    //         hideProgressBar: false,
+    //         closeOnClick: true,
+    //         pauseOnHover: true,
+    //         draggable: true,
+    //         progress: undefined,
+    //         theme: 'dark',
+    //     });
+    // };
 
     return (
         <motion.div
@@ -75,27 +75,31 @@ const Hero = () => {
             <div className="mt-24 relative z-10">
                 <div className="flex justify-center items-center flex-col">
                     <p className='text-[4rem] md:text-[5.5rem] font-extrabold leading-tight text-white text-center'>
-                        Solana Ultimate <br /> Trust Layer
+                        Solana&apos;s Ultimate <br /> Trust Layer
                     </p>
                     <p className='text-white max-w-[80%] md:max-w-[100%] text-md md:text-[1.4rem] text-center mt-[70px] shadow-4xl'>
-                        Stop $1.5B in Web3 Scams with COTTA Scores <br />Join 200k+ Pioneers to Secure DeFi, NFTs, DAOs, and Gamers!
+                      Join COTTACHAIN: Solana&apos;s Trust Layer to Stop $1.5B in
+                        Web3 Scams.<br /> Build, Invest, or Partner to Secure 10M+ Users
+                        with Portable Reputation Scores by 2027.
                     </p>
+                  
+
                 </div>
 
                 <div className='mt-[70px] flex gap-5 justify-center items-center mb-10'>
-                    <button
+                    <Link href="/waitlist">    <button
                         className='bg-[#F28C28] shadow-lg text-white h-auto py-4 px-10 rounded-[40px] md:rounded-[10px] transition-transform duration-200 hover:scale-105 hover:bg-yellow-700 text-1rem md:text-[1.1rem] flex gap-4 items-center'
-                        onClick={handleFeatureToast}
+                    // onClick={handleFeatureToast}
                     >
                         <Image src="/solana.png" alt='solana logo' height={30} width={30} className='rounded-full' />
-                        Login with Solana
-                    </button>
+                        Join our waitlist
+                    </button> </Link>
                 </div>
             </div>
 
             {/* You can uncomment About section if needed */}
             {/* <About /> */}
-            <ToastContainer />
+            {/* <ToastContainer /> */}
         </motion.div>
     );
 };
