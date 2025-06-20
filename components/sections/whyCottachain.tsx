@@ -205,7 +205,11 @@ const WhyCottachain = () => {
             <div className="relative w-full my-[50px] max-w-[95vw] md:max-w-[800px] md:mt-20 p-[1px] rounded-[10px] mx-auto">
                 <div className="h-full rounded-[15px] p-2 bg-gradient-to-br from-[#8A7037] to-[#D97706] flex flex-col justify-center items-start p-5 md:p-7">
                     <p className="font-medium text-[1.1rem] md:text-[1.5rem] mb-4 text-white">Join 200+ users on Cottachain Protocol</p>
-                    <p className="text-white font-thin text-[1rem] md:text-[1.1rem] w-full md:w-[65%] mb-5">Designed to turn your good deeds online into endless rewards.</p>
+                    <p className="text-white font-thin text-[1rem] md:text-[1.1rem] w-full md:w-[65%] mb-5">
+                    
+                    Solana’s Trust Layer to Stop $1.5B in Web3 Scams. Build, Invest, or Partner to Secure 10M+ Users with Portable Reputation Scores by 2027."
+                    
+                    </p>
                     <div className="flex flex-col md:flex-row gap-4 w-full">
                         <Link href="/waitlist">    <button className="bg-transparent shadow-sm shadow-gray-800 cursor-pointer hover:bg-slate-900 text-white text-sm p-3 rounded-[10px] w-full md:w-auto">Join our waitlist</button> </Link>
                     </div>
