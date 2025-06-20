@@ -8,7 +8,7 @@ import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 const socials = [
   { name: 'X', url: 'https://x.com/COTTACHAIN' },
-  { name: 'Discord', url: 'https://discord.com/KCygwKz4vV' },
+  { name: 'Discord', url: 'https://discord.gg/KCygwKz4vV' },
   { name: 'Telegram', url: 'https://discord.com/KCygwKz4vV' },
 ];
 // const contact = [
