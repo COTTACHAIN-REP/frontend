@@ -12,7 +12,7 @@ const WhyCottachain = () => {
         "Cryptographic Proofs: zk-SNARKs enable score verification without revealing transaction data, with ECDSA signatures for integrity.",
         "Anti-Fraud Mechanisms: Sybil resistance via $COTTA staking and 30-day activity thresholds, plus bot detection through transaction pattern analysis.",
         "Scoring Algorithm: Weighs on-chain actions (40% transactions, 30% governance, 20% dApp interactions, 10% staking) for real-time scores (0–1000)",
-        `API: RESTful endpoints (e.g., GET /score/{"{wallet_address}"}) allow dApps to query scores, with testnet functionality by Q3 2025.`,
+        `API: RESTful endpoints (e.g., GET /score/{'{wallet_address}'}) allow dApps to query scores, with testnet functionality by Q3 2025.`,
     ];
     const trustFeatures = [
         {
@@ -69,7 +69,7 @@ const WhyCottachain = () => {
 
             <div className="relative mt-10 md:mt-[150px] w-full flex justify-center items-center">
                 <div className="grid bg-gradient-to-br bg-blur from-orange-900 to-[#062015]
- grid-cols-1 md:grid-cols-3 h-auto gap-y-14 md:gap-5 p-10 md:gap-y-14 w-[90%]">
+                    grid-cols-1 md:grid-cols-3 h-auto gap-y-14 md:gap-5 p-10 md:gap-y-14 w-[90%]">
                     {trustFeatures.map((item, idx) => (
 
                         <div key={idx} className="md:h-[400px] h-auto p-5 bg-[#1A1817] rounded-[10px] p-2 w-full flex justify-center items-center flex-col">
@@ -206,17 +206,17 @@ const WhyCottachain = () => {
                 <div className="h-full rounded-[15px] p-2 bg-gradient-to-br from-[#8A7037] to-[#D97706] flex flex-col justify-center items-start p-5 md:p-7">
                     <p className="font-medium text-[1.1rem] md:text-[1.5rem] mb-4 text-white">Join 200+ users on Cottachain Protocol</p>
                     <p className="text-white font-thin text-[1rem] md:text-[1.1rem] w-full md:w-[65%] mb-5">
-                    
-                    Solana’s Trust Layer to Stop $1.5B in Web3 Scams. Build, Invest, or Partner to Secure 10M+ Users with Portable Reputation Scores by 2027."
-                    
-                    </p>
+                        
+                        Solana’s Trust Layer to Stop $1.5B in Web3 Scams. Build, Invest, or Partner to Secure 10M+ Users with Portable Reputation Scores by 2027.
+                        
+                        </p>
                     <div className="flex flex-col md:flex-row gap-4 w-full">
                         <Link href="/waitlist">    <button className="bg-transparent shadow-sm shadow-gray-800 cursor-pointer hover:bg-slate-900 text-white text-sm p-3 rounded-[10px] w-full md:w-auto">Join our waitlist</button> </Link>
                     </div>
                 </div>
             </div>
         </div>
-    )
+    );
 }
 
 
